@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		5CAEADFB2946FEEB003D5BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEADFA2946FEEB003D5BA0 /* AppDelegate.swift */; };
 		5CAEADFD2946FEEB003D5BA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEADFC2946FEEB003D5BA0 /* SceneDelegate.swift */; };
-		5CAEADFF2946FEEB003D5BA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEADFE2946FEEB003D5BA0 /* ViewController.swift */; };
 		5CAEAE022946FEEB003D5BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CAEAE002946FEEB003D5BA0 /* Main.storyboard */; };
 		5CAEAE052946FEEB003D5BA0 /* RecipeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEAE032946FEEB003D5BA0 /* RecipeApp.xcdatamodeld */; };
 		5CAEAE072946FEEC003D5BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CAEAE062946FEEC003D5BA0 /* Assets.xcassets */; };
 		5CAEAE0A2946FEEC003D5BA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CAEAE082946FEEC003D5BA0 /* LaunchScreen.storyboard */; };
+		5CE75D4229470C1700F05EE3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE75D4029470C1700F05EE3 /* HomeViewController.swift */; };
+		5CE75D4329470C1700F05EE3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE75D4129470C1700F05EE3 /* HomeViewController.xib */; };
+		5CE75D4E294716AF00F05EE3 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE75D4D294716AF00F05EE3 /* NibLoadable.swift */; };
+		5CE75D5B29471A9D00F05EE3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE75D5A29471A9D00F05EE3 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5CAEADF72946FEEB003D5BA0 /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAEADFA2946FEEB003D5BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CAEADFC2946FEEB003D5BA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5CAEADFE2946FEEB003D5BA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5CAEAE012946FEEB003D5BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CAEAE042946FEEB003D5BA0 /* RecipeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipeApp.xcdatamodel; sourceTree = "<group>"; };
 		5CAEAE062946FEEC003D5BA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CAEAE092946FEEC003D5BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CAEAE0B2946FEEC003D5BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CE75D4029470C1700F05EE3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5CE75D4129470C1700F05EE3 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		5CE75D4D294716AF00F05EE3 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		5CE75D5A29471A9D00F05EE3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +64,15 @@
 		5CAEADF92946FEEB003D5BA0 /* RecipeApp */ = {
 			isa = PBXGroup;
 			children = (
-				5CAEAE112947043E003D5BA0 /* Networking */,
 				5CAEADFA2946FEEB003D5BA0 /* AppDelegate.swift */,
 				5CAEADFC2946FEEB003D5BA0 /* SceneDelegate.swift */,
-				5CAEADFE2946FEEB003D5BA0 /* ViewController.swift */,
+				5CE75D59294719BF00F05EE3 /* Model */,
+				5CAEAE112947043E003D5BA0 /* Networking */,
+				5CE75D4429470C2000F05EE3 /* Views */,
+				5CE75D58294716F100F05EE3 /* Resources */,
+				5CE75D4F294716BE00F05EE3 /* Extensions */,
 				5CAEAE002946FEEB003D5BA0 /* Main.storyboard */,
-				5CAEAE062946FEEC003D5BA0 /* Assets.xcassets */,
-				5CAEAE082946FEEC003D5BA0 /* LaunchScreen.storyboard */,
 				5CAEAE0B2946FEEC003D5BA0 /* Info.plist */,
-				5CAEAE032946FEEB003D5BA0 /* RecipeApp.xcdatamodeld */,
 			);
 			path = RecipeApp;
 			sourceTree = "<group>";
@@ -74,8 +80,43 @@
 		5CAEAE112947043E003D5BA0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				5CE75D5A29471A9D00F05EE3 /* NetworkManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		5CE75D4429470C2000F05EE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5CE75D4029470C1700F05EE3 /* HomeViewController.swift */,
+				5CE75D4129470C1700F05EE3 /* HomeViewController.xib */,
+				5CAEAE082946FEEC003D5BA0 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5CE75D4F294716BE00F05EE3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5CE75D4D294716AF00F05EE3 /* NibLoadable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5CE75D58294716F100F05EE3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5CAEAE062946FEEC003D5BA0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5CE75D59294719BF00F05EE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5CAEAE032946FEEB003D5BA0 /* RecipeApp.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +180,7 @@
 				5CAEAE0A2946FEEC003D5BA0 /* LaunchScreen.storyboard in Resources */,
 				5CAEAE072946FEEC003D5BA0 /* Assets.xcassets in Resources */,
 				5CAEAE022946FEEB003D5BA0 /* Main.storyboard in Resources */,
+				5CE75D4329470C1700F05EE3 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +191,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CAEADFF2946FEEB003D5BA0 /* ViewController.swift in Sources */,
+				5CE75D5B29471A9D00F05EE3 /* NetworkManager.swift in Sources */,
+				5CE75D4229470C1700F05EE3 /* HomeViewController.swift in Sources */,
 				5CAEADFB2946FEEB003D5BA0 /* AppDelegate.swift in Sources */,
+				5CE75D4E294716AF00F05EE3 /* NibLoadable.swift in Sources */,
 				5CAEADFD2946FEEB003D5BA0 /* SceneDelegate.swift in Sources */,
 				5CAEAE052946FEEB003D5BA0 /* RecipeApp.xcdatamodeld in Sources */,
 			);
