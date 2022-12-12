@@ -1,7 +1,11 @@
 import Foundation
 
-class NetworkManager {
-    func fetchData() {
+protocol FoodListRetreivable {
+    func fetchFoodList(completion: @escaping ([Food]) -> Void)
+}
+
+class NetworkManager: FoodListRetreivable {
+    func fetchFoodList(completion: @escaping ([Food]) -> Void) {
         
     }
 }

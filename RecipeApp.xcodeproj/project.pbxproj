@@ -17,6 +17,8 @@
 		5CE75D4329470C1700F05EE3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE75D4129470C1700F05EE3 /* HomeViewController.xib */; };
 		5CE75D4E294716AF00F05EE3 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE75D4D294716AF00F05EE3 /* NibLoadable.swift */; };
 		5CE75D5B29471A9D00F05EE3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE75D5A29471A9D00F05EE3 /* NetworkManager.swift */; };
+		5CE75D5D29471E1900F05EE3 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE75D5C29471E1900F05EE3 /* UIImageView.swift */; };
+		5CE75D5F294727B600F05EE3 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE75D5E294727B600F05EE3 /* Food.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		5CE75D4129470C1700F05EE3 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		5CE75D4D294716AF00F05EE3 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		5CE75D5A29471A9D00F05EE3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5CE75D5C29471E1900F05EE3 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		5CE75D5E294727B600F05EE3 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				5CE75D4D294716AF00F05EE3 /* NibLoadable.swift */,
+				5CE75D5C29471E1900F05EE3 /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				5CAEAE032946FEEB003D5BA0 /* RecipeApp.xcdatamodeld */,
+				5CE75D5E294727B600F05EE3 /* Food.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +202,8 @@
 				5CAEADFB2946FEEB003D5BA0 /* AppDelegate.swift in Sources */,
 				5CE75D4E294716AF00F05EE3 /* NibLoadable.swift in Sources */,
 				5CAEADFD2946FEEB003D5BA0 /* SceneDelegate.swift in Sources */,
+				5CE75D5F294727B600F05EE3 /* Food.swift in Sources */,
+				5CE75D5D29471E1900F05EE3 /* UIImageView.swift in Sources */,
 				5CAEAE052946FEEB003D5BA0 /* RecipeApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
