@@ -58,6 +58,7 @@
 		5CAEADF92946FEEB003D5BA0 /* RecipeApp */ = {
 			isa = PBXGroup;
 			children = (
+				5CAEAE112947043E003D5BA0 /* Networking */,
 				5CAEADFA2946FEEB003D5BA0 /* AppDelegate.swift */,
 				5CAEADFC2946FEEB003D5BA0 /* SceneDelegate.swift */,
 				5CAEADFE2946FEEB003D5BA0 /* ViewController.swift */,
@@ -68,6 +69,13 @@
 				5CAEAE032946FEEB003D5BA0 /* RecipeApp.xcdatamodeld */,
 			);
 			path = RecipeApp;
+			sourceTree = "<group>";
+		};
+		5CAEAE112947043E003D5BA0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
