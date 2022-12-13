@@ -1,11 +1,14 @@
 import UIKit
 
 class HomeViewController: UIViewController, NibLoadable {
+    let network = NetworkManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print("loading")
+        network.fetchFoodDetails(for: "pasta") { food in
+            let test = true
+        }
     }
 
 
