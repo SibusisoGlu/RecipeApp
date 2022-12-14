@@ -1,16 +1,18 @@
 import UIKit
 
 class HomeViewController: UIViewController, NibLoadable {
-    let network = NetworkManager()
+
+    private let viewModel = RecipeViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("loading")
-        network.fetchFoodDetails(for: "pasta") { food in
-            let test = true
-        }
+        viewModel.getRecipeInformation(with: "pasta")
+        test()
     }
 
+    func test() {
+        viewModel.getSearchResultData()
+    }
 
     /*
     // MARK: - Navigation

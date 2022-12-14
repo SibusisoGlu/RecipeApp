@@ -1,6 +1,6 @@
 import Foundation
 
-class FoodModel {
+class FoodDetailModel {
     var foodId: Int
     var foodTitle: String
     var foodReadyInMinutes, foodServings: Int
