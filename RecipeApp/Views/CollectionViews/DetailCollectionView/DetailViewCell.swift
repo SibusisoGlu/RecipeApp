@@ -1,17 +1,17 @@
-//
-//  DetailViewCell.swift
-//  RecipeApp
-//
-//  Created by Sibusiso Mbonani on 2022/12/14.
-//
-
 import UIKit
 
 class DetailViewCell: UICollectionViewCell {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var subtitle: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+
+    func setUpView(image: String, title: String, subtitle: String) {
+
     }
 
 }

@@ -4,16 +4,11 @@ protocol FoodListRetreivable {
     func fetchFoodDetails(for query: String, completion: @escaping ([FoodDetailModel]?) -> Void)
 }
 
-protocol FoodInformationDelegate {
-    func didRetrieveFoodInformation(foodList: [FoodDetailModel])
-}
-
 class NetworkManager: FoodListRetreivable {
     private let baseURL = "https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true"
     private let APIKey = "b9c19eab49404c3fab81382adb8d38d7"
 //    var cache = [String: [FoodDetailModel]] = [:]
     var foodModel: [FoodDetailModel] = []
-    var delegate: FoodInformationDelegate?
 
     func fetchFoodDetails(for query: String, completion: @escaping ([FoodDetailModel]?) -> Void) {
         let completeURL = "\(baseURL)&apiKey=\(APIKey)&query=\(query)"
@@ -27,7 +22,6 @@ class NetworkManager: FoodListRetreivable {
             if let safeData = data {
                 let foodInformation = try? JSONDecoder().decode(Food.self, from: safeData)
                 self?.foodModel = self?.convertFoodModel(foodData: foodInformation) ?? []
-                self?.delegate?.didRetrieveFoodInformation(foodList: self?.foodModel ?? [])
                 completion(self?.foodModel)
             } else {
                 completion([])
