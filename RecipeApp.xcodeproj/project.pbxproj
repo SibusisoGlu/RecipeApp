@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C517299294AF3790025DC37 /* DetailCollectionViewSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C517298294AF3790025DC37 /* DetailCollectionViewSections.swift */; };
 		5C5C87382947721B00CB9B64 /* FoodDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5C87372947721B00CB9B64 /* FoodDetailModel.swift */; };
 		5C8426822949A6FB00CD33CB /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8426812949A6FB00CD33CB /* RecipeViewModel.swift */; };
 		5C8426882949C3FC00CD33CB /* FoodSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8426872949C3FC00CD33CB /* FoodSearchModel.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C517298294AF3790025DC37 /* DetailCollectionViewSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewSections.swift; sourceTree = "<group>"; };
 		5C5C87372947721B00CB9B64 /* FoodDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailModel.swift; sourceTree = "<group>"; };
 		5C8426812949A6FB00CD33CB /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		5C8426872949C3FC00CD33CB /* FoodSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchModel.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				5C84268F2949CA5300CD33CB /* DetailCollectionView.swift */,
 				5C8426952949CA8D00CD33CB /* DetailViewCell.swift */,
 				5C8426962949CA8D00CD33CB /* DetailViewCell.xib */,
+				5C517298294AF3790025DC37 /* DetailCollectionViewSections.swift */,
 			);
 			path = DetailCollectionView;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				5CE75D4229470C1700F05EE3 /* HomeViewController.swift in Sources */,
 				5CAEADFB2946FEEB003D5BA0 /* AppDelegate.swift in Sources */,
 				5CE75D4E294716AF00F05EE3 /* NibLoadable.swift in Sources */,
+				5C517299294AF3790025DC37 /* DetailCollectionViewSections.swift in Sources */,
 				5CAEADFD2946FEEB003D5BA0 /* SceneDelegate.swift in Sources */,
 				5C8426932949CA7500CD33CB /* CategoryViewCell.swift in Sources */,
 				5CE75D5F294727B600F05EE3 /* Food.swift in Sources */,

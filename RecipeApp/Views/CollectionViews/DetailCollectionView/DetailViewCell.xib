@@ -63,6 +63,7 @@
             </constraints>
             <size key="customSize" width="144" height="188"/>
             <connections>
+                <outlet property="detailView" destination="1hg-Wi-jz7" id="Yc6-f5-q59"/>
                 <outlet property="imageView" destination="Klz-1B-07o" id="Y34-qI-K16"/>
                 <outlet property="subtitle" destination="mde-ca-VjO" id="e2J-bI-icT"/>
                 <outlet property="title" destination="yvl-3Z-Lj2" id="lGb-s8-DUW"/>

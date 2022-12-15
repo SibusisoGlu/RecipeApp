@@ -1,7 +1,5 @@
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class CategoryCollectionView: UICollectionViewController {
 
     override func viewDidLoad() {

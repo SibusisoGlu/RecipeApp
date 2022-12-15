@@ -1,78 +1,29 @@
 import UIKit
 
-class HomeViewController: UIViewController, NibLoadable, FoodInformationDelegate {
-
+class HomeViewController: UIViewController, NibLoadable {
     @IBOutlet weak var personalMealView: UIView!
-    
     @IBOutlet weak var recommendedMealsView: UIView!
-    
-    private let viewModel = RecipeViewModel()
-    private var searchController = UISearchController(searchResultsController: nil)
-    var foodData: [FoodDetailModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.delegate = self
-        configureSearchController()
+        setUpBottomContainer()
     }
 
-    func configureSearchController() {
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Meal"
-        searchController.searchBar.setValue("Done", forKey: "cancelButtonText")
-        navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
-        definesPresentationContext = true
+    private func setUpBottomContainer() {
+        let controller = DetailCollectionView(collectionViewLayout: UICollectionViewLayout())
+
+        addChild(controller)
+
+        controller.collectionView.translatesAutoresizingMaskIntoConstraints = false
+        recommendedMealsView.addSubview(controller.collectionView)
+
+        NSLayoutConstraint.activate([
+            controller.collectionView.leftAnchor.constraint(equalTo: recommendedMealsView.leftAnchor),
+            controller.collectionView.topAnchor.constraint(equalTo: recommendedMealsView.topAnchor),
+            controller.collectionView.rightAnchor.constraint(equalTo: recommendedMealsView.rightAnchor),
+            controller.collectionView.bottomAnchor.constraint(equalTo: recommendedMealsView.bottomAnchor)])
+
+        controller.didMove(toParent: self)
     }
 
-    func didRetrieveFoodInformation(foodList: [FoodDetailModel]) {
-        print(foodList)
-    }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-
-extension HomeViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        if let searchText = searchController.searchBar.text,
-           searchController.isActive {
-            updateResults(for: searchText)
-//            print(searchText)
-        }
-    }
-
-    func updateResults(for searchText: String) {
-        if searchText.isEmpty {
-//            filteredPets = pets
-            print("No Text")
-        } else {
-//            filteredPets = filterPets(for: searchText)
-            filterText(for: searchText)
-        }
-//         needs to be replaced by snapshot
-//        collectionView.reloadData()
-//        updateSnapshot()
-    }
-
-//    func filterPets(for searchText: String) -> [PetSearchData] {
-//        return pets.filter {
-//            return $0.name?.lowercased().contains(searchText.lowercased()) ?? false
-//        }
-//    }
-    func filterText(for searchText: String) {
-        print(searchText.lowercased())
-
-//        viewModel.getRecipeInformation(with: searchText.lowercased())
-    }
 }

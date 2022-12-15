@@ -27,8 +27,8 @@ class RecipeViewModel: FoodInformationDelegate, SearchItemRetreivable {
         
     }
 
-    func getSearchResultData() {
-        print(foodInformation?[0].foodTitle)
-    }
+//    func getSearchResultData() {
+//        print(foodInformation?[0].foodTitle)
+//    }
 
 }

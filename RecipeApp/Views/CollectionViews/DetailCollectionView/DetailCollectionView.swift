@@ -1,88 +1,65 @@
-//
-//  DetailCollectionView.swift
-//  RecipeApp
-//
-//  Created by Sibusiso Mbonani on 2022/12/14.
-//
-
 import UIKit
 
-private let reuseIdentifier = "Cell"
+class DetailCollectionView: UICollectionViewController, FoodInformationDelegate {
+    typealias DataSource = UICollectionViewDiffableDataSource<DetailCollectionViewSections, FoodDetailModel>
+    typealias DataSourceSnapshot = NSDiffableDataSourceSnapshot<DetailCollectionViewSections, FoodDetailModel>
 
-class DetailCollectionView: UICollectionViewController {
+    private var dataSource: DataSource?
+    private var snapshot = DataSourceSnapshot()
+    private var viewModel = RecipeViewModel()
+    private var foodInformation: [FoodDetailModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        viewModel.delegate = self
+        viewModel.getRecipeInformation(with: "pasta")
+        
+        setUpView()
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    private func setUpView() {
+        collectionView.collectionViewLayout = Layouts.categoryLayout()
+        collectionView.register(UINib(nibName: String(describing: DetailViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: DetailViewCell.self))
+        collectionView.register(UINib(nibName: String(describing: HeaderCell.self), bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: HeaderCell.self))
     }
 
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+    func didRetrieveFoodInformation(foodList: [FoodDetailModel]) {
+        foodInformation = foodList
+        configureDataSource()
+        configureSnapshot()
+        print(foodList[0].foodTitle)
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
-        return cell
+    private func configureDataSource() {
+        dataSource = DataSource(collectionView: collectionView) { collectionView, indexPath, item in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DetailViewCell.self), for: indexPath) as? DetailViewCell
+            cell?.setUpView(image: item.foodImage, foodTitle: item.foodTitle, foodSubtitle: item.foodReadyInMinutes)
+            return cell
+
+        }
+
+        dataSource?.supplementaryViewProvider = { collectionView, kind, indexPath in
+            guard kind == UICollectionView.elementKindSectionHeader else {
+                return UICollectionReusableView()
+            }
+
+            let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: HeaderCell.self), for: indexPath) as? HeaderCell
+
+            let section = self.dataSource?.snapshot().sectionIdentifiers[indexPath.section]
+            view?.headerText.text = section?.rawValue
+            return view
+        }
     }
 
-    // MARK: UICollectionViewDelegate
+    private func configureSnapshot(animatingChange: Bool = false) {
+        let sections = DetailCollectionViewSections.allCases
 
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+        snapshot = DataSourceSnapshot()
+        snapshot.appendSections([.recomendations])
+
+        for section in sections {
+            snapshot.appendItems(foodInformation, toSection: section)
+        }
+        dataSource?.apply(snapshot)
     }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }

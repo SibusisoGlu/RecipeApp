@@ -19,12 +19,14 @@ class NetworkManager: FoodListRetreivable {
 
         let request = URLRequest(url: url)
         let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
-            if let safeData = data {
-                let foodInformation = try? JSONDecoder().decode(Food.self, from: safeData)
-                self?.foodModel = self?.convertFoodModel(foodData: foodInformation) ?? []
-                completion(self?.foodModel)
-            } else {
-                completion([])
+            DispatchQueue.main.async {
+                if let safeData = data {
+                    let foodInformation = try? JSONDecoder().decode(Food.self, from: safeData)
+                    self?.foodModel = self?.convertFoodModel(foodData: foodInformation) ?? []
+                    completion(self?.foodModel)
+                } else {
+                    completion([])
+                }
             }
         }
         task.resume()
@@ -34,7 +36,7 @@ class NetworkManager: FoodListRetreivable {
         guard let foodInformation = foodData?.results else { return nil }
         var foodResults: [FoodDetailModel] = []
         for foodItem in foodInformation {
-            let food = FoodDetailModel(id: foodItem.id ?? 0,
+            let food = FoodDetailModel(foodId: foodItem.id ?? 0,
                                  title: foodItem.title ?? "",
                                  readyInMinutes: foodItem.readyInMinutes ?? 0,
                                  servings: foodItem.servings ?? 0,

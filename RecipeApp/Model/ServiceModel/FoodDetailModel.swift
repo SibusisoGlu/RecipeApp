@@ -1,6 +1,15 @@
 import Foundation
 
-class FoodDetailModel {
+class FoodDetailModel: Hashable {
+    static func == (lhs: FoodDetailModel, rhs: FoodDetailModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    var id = UUID()
     var foodId: Int
     var foodTitle: String
     var foodReadyInMinutes, foodServings: Int
@@ -8,8 +17,8 @@ class FoodDetailModel {
     var foodSummary: String
     var foodSteps: [Step]
 
-    init(id: Int, title: String, readyInMinutes: Int, servings: Int, image: String, summary: String, steps: [Step]) {
-        self.foodId = id
+    init(foodId: Int, title: String, readyInMinutes: Int, servings: Int, image: String, summary: String, steps: [Step]) {
+        self.foodId = foodId
         self.foodTitle = title
         self.foodReadyInMinutes = readyInMinutes
         self.foodServings = servings

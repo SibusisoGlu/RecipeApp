@@ -21,12 +21,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RWV-W1-ABH">
-                    <rect key="frame" x="0.0" y="213" width="393" height="115"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="408"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7bf-3q-vhn">
-                    <rect key="frame" x="0.0" y="336" width="393" height="463"/>
+                    <rect key="frame" x="0.0" y="475" width="393" height="324"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                 </view>
