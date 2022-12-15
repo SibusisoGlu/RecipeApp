@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="RecipeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="RecipeApp" customModuleProvider="target">
             <connections>
-                <outlet property="personalMealView" destination="RWV-W1-ABH" id="XyN-Wz-IR2"/>
-                <outlet property="recommendedMealsView" destination="7bf-3q-vhn" id="FTV-kM-rbi"/>
+                <outlet property="bottomContainer" destination="EQc-ky-869" id="P7g-Y0-itv"/>
+                <outlet property="topContainer" destination="inJ-a8-Bmg" id="rCo-Mo-Mq9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,30 +20,20 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWV-W1-ABH">
-                    <rect key="frame" x="0.0" y="59" width="393" height="408"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="inJ-a8-Bmg">
+                    <rect key="frame" x="0.0" y="59" width="393" height="366"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="RWV-W1-ABH" secondAttribute="height" multiplier="131:136" id="Bsq-aA-DdD"/>
-                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bf-3q-vhn">
-                    <rect key="frame" x="0.0" y="475" width="393" height="343"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQc-ky-869">
+                    <rect key="frame" x="0.0" y="433" width="393" height="385"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="RWV-W1-ABH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="6T5-As-jst"/>
-                <constraint firstItem="7bf-3q-vhn" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="BTn-Rr-C2o"/>
-                <constraint firstItem="7bf-3q-vhn" firstAttribute="top" secondItem="RWV-W1-ABH" secondAttribute="bottom" constant="8" symbolic="YES" id="Nyk-Ec-MSs"/>
-                <constraint firstItem="RWV-W1-ABH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Uuw-Id-gHt"/>
-                <constraint firstItem="7bf-3q-vhn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WHX-1A-f8v"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7bf-3q-vhn" secondAttribute="bottom" id="bCX-Qh-SU6"/>
-                <constraint firstItem="RWV-W1-ABH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="o3N-K2-OdK"/>
-            </constraints>
-            <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
+            <point key="canvasLocation" x="-16.030534351145036" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>

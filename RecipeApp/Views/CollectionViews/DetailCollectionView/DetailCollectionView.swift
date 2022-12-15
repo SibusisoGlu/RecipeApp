@@ -13,7 +13,7 @@ class DetailCollectionView: UICollectionViewController, FoodInformationDelegate 
         super.viewDidLoad()
         viewModel.delegate = self
         viewModel.getRecipeInformation(with: "pasta")
-        
+        collectionView.dataSource = dataSource
         setUpView()
     }
 
@@ -27,7 +27,6 @@ class DetailCollectionView: UICollectionViewController, FoodInformationDelegate 
         foodInformation = foodList
         configureDataSource()
         configureSnapshot()
-        print(foodList[0].foodTitle)
     }
 
     private func configureDataSource() {
@@ -61,5 +60,12 @@ class DetailCollectionView: UICollectionViewController, FoodInformationDelegate 
             snapshot.appendItems(foodInformation, toSection: section)
         }
         dataSource?.apply(snapshot)
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewController = DetailViewController()
+        let selectedFood = foodInformation[indexPath.row]
+        viewController.prepareView(with: selectedFood)
+        show(viewController, sender: self)
     }
 }
