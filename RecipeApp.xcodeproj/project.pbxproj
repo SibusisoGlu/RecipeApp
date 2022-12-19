@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C3C54EB295037DE000D1B37 /* SegmentControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C54EA295037DE000D1B37 /* SegmentControlView.swift */; };
+		5C3C54ED295037F8000D1B37 /* SegmentControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C3C54EC295037F8000D1B37 /* SegmentControlView.xib */; };
+		5C3C54EF29505F8E000D1B37 /* UIViewConstraintLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C54EE29505F8E000D1B37 /* UIViewConstraintLayout.swift */; };
 		5C517299294AF3790025DC37 /* DetailCollectionViewSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C517298294AF3790025DC37 /* DetailCollectionViewSections.swift */; };
 		5C51729C294B4CD90025DC37 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C51729A294B4CD90025DC37 /* DetailViewController.swift */; };
 		5C51729D294B4CD90025DC37 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C51729B294B4CD90025DC37 /* DetailViewController.xib */; };
@@ -37,6 +40,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C3C54EA295037DE000D1B37 /* SegmentControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlView.swift; sourceTree = "<group>"; };
+		5C3C54EC295037F8000D1B37 /* SegmentControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentControlView.xib; sourceTree = "<group>"; };
+		5C3C54EE29505F8E000D1B37 /* UIViewConstraintLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewConstraintLayout.swift; sourceTree = "<group>"; };
 		5C517298294AF3790025DC37 /* DetailCollectionViewSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewSections.swift; sourceTree = "<group>"; };
 		5C51729A294B4CD90025DC37 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5C51729B294B4CD90025DC37 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
@@ -79,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C3C54E929503752000D1B37 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				5C3C54EA295037DE000D1B37 /* SegmentControlView.swift */,
+				5C3C54EC295037F8000D1B37 /* SegmentControlView.xib */,
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
 		5C5C87362947720000CB9B64 /* ServiceModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +210,7 @@
 			children = (
 				5C8426862949BFE500CD33CB /* ViewControllers */,
 				5C8426832949BFA600CD33CB /* CollectionViews */,
+				5C3C54E929503752000D1B37 /* Nibs */,
 				5CAEAE082946FEEC003D5BA0 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -205,6 +221,7 @@
 			children = (
 				5CE75D4D294716AF00F05EE3 /* NibLoadable.swift */,
 				5CE75D5C29471E1900F05EE3 /* UIImageView.swift */,
+				5C3C54EE29505F8E000D1B37 /* UIViewConstraintLayout.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -285,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CAEAE0A2946FEEC003D5BA0 /* LaunchScreen.storyboard in Resources */,
+				5C3C54ED295037F8000D1B37 /* SegmentControlView.xib in Resources */,
 				5C8426942949CA7500CD33CB /* CategoryViewCell.xib in Resources */,
 				5C8426AE2949D2E900CD33CB /* HeaderCell.xib in Resources */,
 				5C51729D294B4CD90025DC37 /* DetailViewController.xib in Resources */,
@@ -305,6 +323,7 @@
 				5C8426882949C3FC00CD33CB /* FoodSearchModel.swift in Sources */,
 				5CE75D5B29471A9D00F05EE3 /* NetworkManager.swift in Sources */,
 				5CE75D4229470C1700F05EE3 /* HomeViewController.swift in Sources */,
+				5C3C54EF29505F8E000D1B37 /* UIViewConstraintLayout.swift in Sources */,
 				5CAEADFB2946FEEB003D5BA0 /* AppDelegate.swift in Sources */,
 				5CE75D4E294716AF00F05EE3 /* NibLoadable.swift in Sources */,
 				5C517299294AF3790025DC37 /* DetailCollectionViewSections.swift in Sources */,
@@ -320,6 +339,7 @@
 				5C8426972949CA8D00CD33CB /* DetailViewCell.swift in Sources */,
 				5C8426822949A6FB00CD33CB /* RecipeViewModel.swift in Sources */,
 				5C8426AD2949D2E900CD33CB /* HeaderCell.swift in Sources */,
+				5C3C54EB295037DE000D1B37 /* SegmentControlView.swift in Sources */,
 				5CAEAE052946FEEB003D5BA0 /* RecipeApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
