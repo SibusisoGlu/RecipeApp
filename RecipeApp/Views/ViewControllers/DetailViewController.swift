@@ -23,6 +23,8 @@ class DetailViewController: UIViewController, NibLoadable {
         }
 
         segmentControlView.foodStepData = data
+        segmentControlView.prepareView()
+        segmentControlView.generateSteps()
         return segmentControlView
     }
 
