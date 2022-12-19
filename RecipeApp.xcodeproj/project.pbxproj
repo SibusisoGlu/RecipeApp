@@ -10,6 +10,7 @@
 		5C3C54EB295037DE000D1B37 /* SegmentControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C54EA295037DE000D1B37 /* SegmentControlView.swift */; };
 		5C3C54ED295037F8000D1B37 /* SegmentControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C3C54EC295037F8000D1B37 /* SegmentControlView.xib */; };
 		5C3C54EF29505F8E000D1B37 /* UIViewConstraintLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C54EE29505F8E000D1B37 /* UIViewConstraintLayout.swift */; };
+		5C3C54F1295073DB000D1B37 /* FoodStepsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C54F0295073DB000D1B37 /* FoodStepsModel.swift */; };
 		5C517299294AF3790025DC37 /* DetailCollectionViewSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C517298294AF3790025DC37 /* DetailCollectionViewSections.swift */; };
 		5C51729C294B4CD90025DC37 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C51729A294B4CD90025DC37 /* DetailViewController.swift */; };
 		5C51729D294B4CD90025DC37 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C51729B294B4CD90025DC37 /* DetailViewController.xib */; };
@@ -43,6 +44,7 @@
 		5C3C54EA295037DE000D1B37 /* SegmentControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlView.swift; sourceTree = "<group>"; };
 		5C3C54EC295037F8000D1B37 /* SegmentControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentControlView.xib; sourceTree = "<group>"; };
 		5C3C54EE29505F8E000D1B37 /* UIViewConstraintLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewConstraintLayout.swift; sourceTree = "<group>"; };
+		5C3C54F0295073DB000D1B37 /* FoodStepsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStepsModel.swift; sourceTree = "<group>"; };
 		5C517298294AF3790025DC37 /* DetailCollectionViewSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewSections.swift; sourceTree = "<group>"; };
 		5C51729A294B4CD90025DC37 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5C51729B294B4CD90025DC37 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				5CE75D5E294727B600F05EE3 /* Food.swift */,
 				5C5C87372947721B00CB9B64 /* FoodDetailModel.swift */,
 				5C8426872949C3FC00CD33CB /* FoodSearchModel.swift */,
+				5C3C54F0295073DB000D1B37 /* FoodStepsModel.swift */,
 			);
 			path = ServiceModel;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				5C8426A22949CD6F00CD33CB /* Layouts.swift in Sources */,
 				5C84268E2949CA2B00CD33CB /* CategoryCollectionView.swift in Sources */,
 				5C8426902949CA5300CD33CB /* DetailCollectionView.swift in Sources */,
+				5C3C54F1295073DB000D1B37 /* FoodStepsModel.swift in Sources */,
 				5CE75D5D29471E1900F05EE3 /* UIImageView.swift in Sources */,
 				5C8426972949CA8D00CD33CB /* DetailViewCell.swift in Sources */,
 				5C8426822949A6FB00CD33CB /* RecipeViewModel.swift in Sources */,

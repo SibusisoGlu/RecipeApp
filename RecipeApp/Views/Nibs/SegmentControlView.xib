@@ -40,6 +40,10 @@
                 <constraint firstItem="4Pb-jY-KHc" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="iJQ-dX-FTa"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="segmentedControl" destination="IUI-Ff-1vf" id="EFb-Nh-TJp"/>
+                <outlet property="tableView" destination="4Pb-jY-KHc" id="0Ty-Nl-0YE"/>
+            </connections>
             <point key="canvasLocation" x="-16.030534351145036" y="19.366197183098592"/>
         </view>
     </objects>

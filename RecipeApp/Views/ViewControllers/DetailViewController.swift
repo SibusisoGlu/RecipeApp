@@ -16,14 +16,21 @@ class DetailViewController: UIViewController, NibLoadable {
         foodData = foodInformation
     }
 
-    private func addBottomContainerView() {
+    private static func create(with data: [Step]) -> SegmentControlView? {
         let bundle = Bundle.main
         guard let segmentControlView = bundle.loadNibNamed("SegmentControlView", owner: self)?.first as? SegmentControlView else {
-            return
+            return nil
         }
 
-        self.bottomContainer.addSubview(segmentControlView)
-        segmentControlView.pinEdges(to: self.bottomContainer)
+        segmentControlView.foodStepData = data
+        return segmentControlView
+    }
+
+    private func addBottomContainerView() {
+        if let segmentControlView = DetailViewController.create(with: foodData?.foodSteps ?? []) {
+            self.bottomContainer.addSubview(segmentControlView)
+            segmentControlView.pinEdges(to: self.bottomContainer)
+        }
     }
 
 }

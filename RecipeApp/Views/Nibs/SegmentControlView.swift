@@ -1,13 +1,17 @@
 import UIKit
 
 class SegmentControlView: UIView {
+    typealias dataSourceSnapshot = NSDiffableDataSourceSnapshot
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var tableView: UITableView!
+
+    var foodStepData: [Step] = []
+
+    func showData() {
+        for data in foodStepData {
+            print(data.step)
+        }
     }
-    */
 
 }
