@@ -8,12 +8,30 @@ class DetailViewController: UIViewController, NibLoadable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        addTopContainerView()
         addBottomContainerView()
     }
 
     func prepareView(with foodInformation: FoodDetailModel) {
         foodData = foodInformation
+    }
+
+    private static func createTopView(with data: FoodDetailModel) -> FoodDetailView? {
+        let bundle = Bundle.main
+        guard let foodDetailView = bundle.loadNibNamed("FoodDetailView", owner: self)?.first as? FoodDetailView else {
+            return nil
+        }
+
+        foodDetailView.setUpView(with: data.foodImage, data.foodTitle, data.foodReadyInMinutes, isFavourite: false)
+        return foodDetailView
+    }
+
+    private func addTopContainerView() {
+        guard let data = foodData else { return }
+        if let foodDetailView = DetailViewController.createTopView(with: data) {
+            self.topContainer.addSubview(foodDetailView)
+            foodDetailView.pinEdges(to: self.topContainer)
+        }
     }
 
     private static func create(with data: [Step]) -> SegmentControlView? {
@@ -24,7 +42,7 @@ class DetailViewController: UIViewController, NibLoadable {
 
         segmentControlView.foodStepData = data
         segmentControlView.prepareView()
-        segmentControlView.generateSteps()
+        segmentControlView.generateData()
         return segmentControlView
     }
 

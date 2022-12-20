@@ -24,11 +24,16 @@ class RecipeViewModel: FoodInformationDelegate, SearchItemRetreivable {
 
     func didRetrieveFoodInformation(foodList: [FoodDetailModel]) {
         foodInformation = foodList
-        
     }
 
-//    func getSearchResultData() {
-//        print(foodInformation?[0].foodTitle)
+//    func generateData(with foodStepData: [Step], _ steps: [String], _ ingredients: [String]) {
+//        for step in foodStepData {
+//            steps.append(step.step ?? "")
+//            guard let ingredientData = step.ingredients else { return }
+//            for ingredient in ingredientData {
+//                ingredients.append(ingredient.name ?? "")
+//            }
+//        }
 //    }
 
 }

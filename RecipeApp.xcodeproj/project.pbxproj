@@ -13,16 +13,15 @@
 		5C3C54F1295073DB000D1B37 /* FoodStepsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C54F0295073DB000D1B37 /* FoodStepsModel.swift */; };
 		5C3C54FE2950A736000D1B37 /* SegmentControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C54FC2950A736000D1B37 /* SegmentControlCell.swift */; };
 		5C3C54FF2950A736000D1B37 /* SegmentControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C3C54FD2950A736000D1B37 /* SegmentControlCell.xib */; };
+		5C3C5509295194CE000D1B37 /* FoodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C5508295194CE000D1B37 /* FoodDetailView.swift */; };
+		5C3C550B295194E6000D1B37 /* FoodDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C3C550A295194E6000D1B37 /* FoodDetailView.xib */; };
 		5C517299294AF3790025DC37 /* DetailCollectionViewSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C517298294AF3790025DC37 /* DetailCollectionViewSections.swift */; };
 		5C51729C294B4CD90025DC37 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C51729A294B4CD90025DC37 /* DetailViewController.swift */; };
 		5C51729D294B4CD90025DC37 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C51729B294B4CD90025DC37 /* DetailViewController.xib */; };
 		5C5C87382947721B00CB9B64 /* FoodDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5C87372947721B00CB9B64 /* FoodDetailModel.swift */; };
 		5C8426822949A6FB00CD33CB /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8426812949A6FB00CD33CB /* RecipeViewModel.swift */; };
 		5C8426882949C3FC00CD33CB /* FoodSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8426872949C3FC00CD33CB /* FoodSearchModel.swift */; };
-		5C84268E2949CA2B00CD33CB /* CategoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C84268D2949CA2B00CD33CB /* CategoryCollectionView.swift */; };
 		5C8426902949CA5300CD33CB /* DetailCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C84268F2949CA5300CD33CB /* DetailCollectionView.swift */; };
-		5C8426932949CA7500CD33CB /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8426912949CA7500CD33CB /* CategoryViewCell.swift */; };
-		5C8426942949CA7500CD33CB /* CategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8426922949CA7500CD33CB /* CategoryViewCell.xib */; };
 		5C8426972949CA8D00CD33CB /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8426952949CA8D00CD33CB /* DetailViewCell.swift */; };
 		5C8426982949CA8D00CD33CB /* DetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8426962949CA8D00CD33CB /* DetailViewCell.xib */; };
 		5C8426A22949CD6F00CD33CB /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8426A12949CD6F00CD33CB /* Layouts.swift */; };
@@ -49,16 +48,15 @@
 		5C3C54F0295073DB000D1B37 /* FoodStepsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStepsModel.swift; sourceTree = "<group>"; };
 		5C3C54FC2950A736000D1B37 /* SegmentControlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlCell.swift; sourceTree = "<group>"; };
 		5C3C54FD2950A736000D1B37 /* SegmentControlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentControlCell.xib; sourceTree = "<group>"; };
+		5C3C5508295194CE000D1B37 /* FoodDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailView.swift; sourceTree = "<group>"; };
+		5C3C550A295194E6000D1B37 /* FoodDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodDetailView.xib; sourceTree = "<group>"; };
 		5C517298294AF3790025DC37 /* DetailCollectionViewSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewSections.swift; sourceTree = "<group>"; };
 		5C51729A294B4CD90025DC37 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5C51729B294B4CD90025DC37 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		5C5C87372947721B00CB9B64 /* FoodDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailModel.swift; sourceTree = "<group>"; };
 		5C8426812949A6FB00CD33CB /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		5C8426872949C3FC00CD33CB /* FoodSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchModel.swift; sourceTree = "<group>"; };
-		5C84268D2949CA2B00CD33CB /* CategoryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionView.swift; sourceTree = "<group>"; };
 		5C84268F2949CA5300CD33CB /* DetailCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionView.swift; sourceTree = "<group>"; };
-		5C8426912949CA7500CD33CB /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
-		5C8426922949CA7500CD33CB /* CategoryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewCell.xib; sourceTree = "<group>"; };
 		5C8426952949CA8D00CD33CB /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
 		5C8426962949CA8D00CD33CB /* DetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewCell.xib; sourceTree = "<group>"; };
 		5C8426A12949CD6F00CD33CB /* Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layouts.swift; sourceTree = "<group>"; };
@@ -103,6 +101,8 @@
 		5C3C54FA2950A709000D1B37 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5C3C5508295194CE000D1B37 /* FoodDetailView.swift */,
+				5C3C550A295194E6000D1B37 /* FoodDetailView.xib */,
 				5C3C54EA295037DE000D1B37 /* SegmentControlView.swift */,
 				5C3C54EC295037F8000D1B37 /* SegmentControlView.xib */,
 			);
@@ -140,22 +140,11 @@
 		5C8426832949BFA600CD33CB /* CollectionViews */ = {
 			isa = PBXGroup;
 			children = (
-				5C8426842949BFB400CD33CB /* CategoryCollectionView */,
 				5C8426852949BFC800CD33CB /* DetailCollectionView */,
 				5C8426AF2949D2F900CD33CB /* HeaderCell */,
 				5C8426A12949CD6F00CD33CB /* Layouts.swift */,
 			);
 			path = CollectionViews;
-			sourceTree = "<group>";
-		};
-		5C8426842949BFB400CD33CB /* CategoryCollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				5C84268D2949CA2B00CD33CB /* CategoryCollectionView.swift */,
-				5C8426912949CA7500CD33CB /* CategoryViewCell.swift */,
-				5C8426922949CA7500CD33CB /* CategoryViewCell.xib */,
-			);
-			path = CategoryCollectionView;
 			sourceTree = "<group>";
 		};
 		5C8426852949BFC800CD33CB /* DetailCollectionView */ = {
@@ -328,10 +317,10 @@
 			files = (
 				5CAEAE0A2946FEEC003D5BA0 /* LaunchScreen.storyboard in Resources */,
 				5C3C54ED295037F8000D1B37 /* SegmentControlView.xib in Resources */,
-				5C8426942949CA7500CD33CB /* CategoryViewCell.xib in Resources */,
 				5C8426AE2949D2E900CD33CB /* HeaderCell.xib in Resources */,
 				5C51729D294B4CD90025DC37 /* DetailViewController.xib in Resources */,
 				5CAEAE072946FEEC003D5BA0 /* Assets.xcassets in Resources */,
+				5C3C550B295194E6000D1B37 /* FoodDetailView.xib in Resources */,
 				5C8426982949CA8D00CD33CB /* DetailViewCell.xib in Resources */,
 				5C3C54FF2950A736000D1B37 /* SegmentControlCell.xib in Resources */,
 				5CAEAE022946FEEB003D5BA0 /* Main.storyboard in Resources */,
@@ -354,19 +343,18 @@
 				5CE75D4E294716AF00F05EE3 /* NibLoadable.swift in Sources */,
 				5C517299294AF3790025DC37 /* DetailCollectionViewSections.swift in Sources */,
 				5CAEADFD2946FEEB003D5BA0 /* SceneDelegate.swift in Sources */,
-				5C8426932949CA7500CD33CB /* CategoryViewCell.swift in Sources */,
 				5CE75D5F294727B600F05EE3 /* Food.swift in Sources */,
 				5C5C87382947721B00CB9B64 /* FoodDetailModel.swift in Sources */,
 				5C51729C294B4CD90025DC37 /* DetailViewController.swift in Sources */,
 				5C3C54FE2950A736000D1B37 /* SegmentControlCell.swift in Sources */,
 				5C8426A22949CD6F00CD33CB /* Layouts.swift in Sources */,
-				5C84268E2949CA2B00CD33CB /* CategoryCollectionView.swift in Sources */,
 				5C8426902949CA5300CD33CB /* DetailCollectionView.swift in Sources */,
 				5C3C54F1295073DB000D1B37 /* FoodStepsModel.swift in Sources */,
 				5CE75D5D29471E1900F05EE3 /* UIImageView.swift in Sources */,
 				5C8426972949CA8D00CD33CB /* DetailViewCell.swift in Sources */,
 				5C8426822949A6FB00CD33CB /* RecipeViewModel.swift in Sources */,
 				5C8426AD2949D2E900CD33CB /* HeaderCell.swift in Sources */,
+				5C3C5509295194CE000D1B37 /* FoodDetailView.swift in Sources */,
 				5C3C54EB295037DE000D1B37 /* SegmentControlView.swift in Sources */,
 				5CAEAE052946FEEB003D5BA0 /* RecipeApp.xcdatamodeld in Sources */,
 			);
