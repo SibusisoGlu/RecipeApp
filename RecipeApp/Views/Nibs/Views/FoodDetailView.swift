@@ -11,19 +11,34 @@ class FoodDetailView: UIView {
     @IBOutlet weak var favouriteButton: UIButton!
 
     var favouriteDelegate: Favouritable?
+    var foodData: FoodDetailModel?
+    private let databaseHandler = DatabaseHandler()
+    var isFavourited: Bool = false
 
-    func setUpView(with image: String, _ title: String, _ time: Int, isFavourite: Bool) {
-        imageView.loadImage(fromURL: image)
-        foodTitle.text = title
-        foodTime.text = "\(time) mins"
+    func setUpView() {
+        guard let data = foodData else { return }
 
-        checkFavourite(isFavourite: isFavourite)
+        imageView.loadImage(fromURL: data.foodImage)
+        foodTitle.text = data.foodTitle
+        foodTime.text = "\(data.foodReadyInMinutes) mins"
+
+        checkFavourite(isFavourite: data.isFavourite)
+        databaseHandler.loadMeals()
     }
 
     @IBAction func favouriteButtonPressed(_ sender: UIButton) {
-        print("tapped on event")
-
         favouriteDelegate?.toggleFavourite(for: self)
+
+        guard let data = foodData else { return }
+
+        data.isFavourite.toggle()
+        setUpView()
+        print(databaseHandler.meals[0].mealTitle)
+//        if data.isFavourite {
+//            databaseHandler.addMeal(mealData: data)
+//        } else {
+            // search through database to see if exists then remove
+//        }
     }
 
     func checkFavourite(isFavourite: Bool) {

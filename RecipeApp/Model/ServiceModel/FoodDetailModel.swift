@@ -16,8 +16,9 @@ class FoodDetailModel: Hashable {
     var foodImage: String
     var foodSummary: String
     var foodSteps: [Step]
+    var isFavourite: Bool = false
 
-    init(foodId: Int, title: String, readyInMinutes: Int, servings: Int, image: String, summary: String, steps: [Step]) {
+    init(foodId: Int, title: String, readyInMinutes: Int, servings: Int, image: String, summary: String, steps: [Step], isFavourite: Bool = false) {
         self.foodId = foodId
         self.foodTitle = title
         self.foodReadyInMinutes = readyInMinutes
@@ -25,5 +26,6 @@ class FoodDetailModel: Hashable {
         self.foodImage = image
         self.foodSummary = summary
         self.foodSteps = steps
+        self.isFavourite = isFavourite
     }
 }

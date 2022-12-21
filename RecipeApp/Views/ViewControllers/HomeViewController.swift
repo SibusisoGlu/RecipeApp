@@ -7,6 +7,17 @@ class HomeViewController: UIViewController, NibLoadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpBottomContainer()
+        setUpNavigationItem()
+    }
+
+    private func setUpNavigationItem() {
+        let favouritesButton = UIBarButtonItem(title: "Favs", style: .plain, target: self, action: #selector(goToHelp))
+        navigationItem.rightBarButtonItem = favouritesButton
+    }
+
+    @objc func goToHelp() {
+        let favoutitesViewController = FavoutiesViewController()
+        navigationController?.pushViewController(favoutitesViewController, animated: true)
     }
 
     private func setUpBottomContainer() {

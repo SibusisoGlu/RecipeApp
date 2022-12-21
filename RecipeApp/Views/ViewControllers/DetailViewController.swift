@@ -1,6 +1,6 @@
 import UIKit
 
-class DetailViewController: UIViewController, NibLoadable {
+class DetailViewController: UIViewController, NibLoadable, Favouritable {
     @IBOutlet weak private var topContainer: UIView!
     @IBOutlet weak private var bottomContainer: UIView!
 
@@ -22,8 +22,14 @@ class DetailViewController: UIViewController, NibLoadable {
             return nil
         }
 
-        foodDetailView.setUpView(with: data.foodImage, data.foodTitle, data.foodReadyInMinutes, isFavourite: false)
+        foodDetailView.foodData = data
+        foodDetailView.setUpView()
+        foodDetailView.favouriteDelegate = self as? Favouritable
         return foodDetailView
+    }
+    
+    func toggleFavourite(for view: UIView) {
+        foodData?.isFavourite.toggle()
     }
 
     private func addTopContainerView() {
