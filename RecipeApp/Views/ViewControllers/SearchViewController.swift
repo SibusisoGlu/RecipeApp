@@ -26,10 +26,11 @@ class SearchViewController: UIViewController, NibLoadable, FoodInformationDelega
 
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         guard let searchText = searchBarText.text else { return }
+        let filteredSearchText = searchText.replacingOccurrences(of: " ", with: "+")
         if searchText == "" {
             searchBarText.text = "Enter your meal"
         } else {
-            viewModel.getRecipeInformation(with: searchText)
+            viewModel.getRecipeInformation(with: filteredSearchText)
             tableView.reloadData()
         }
     }
@@ -49,5 +50,16 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             return UITableViewCell()
         }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigateToDetailView(with: indexPath.row)
+    }
+
+    private func navigateToDetailView(with indexPath: Int) {
+        let data = foodInformation[indexPath]
+        let viewController = DetailViewController()
+        viewController.prepareView(with: data)
+        show(viewController, sender: self)
     }
 }
