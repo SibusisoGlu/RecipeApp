@@ -33,12 +33,11 @@ class FoodDetailView: UIView {
 
         data.isFavourite.toggle()
         setUpView()
-        print(databaseHandler.meals[0].mealTitle)
-//        if data.isFavourite {
-//            databaseHandler.addMeal(mealData: data)
-//        } else {
-            // search through database to see if exists then remove
-//        }
+        if data.isFavourite {
+            databaseHandler.addMeal(mealData: data)
+        } else {
+//             search through database to see if exists then remove
+        }
     }
 
     func checkFavourite(isFavourite: Bool) {

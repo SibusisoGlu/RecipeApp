@@ -23,16 +23,23 @@ class SearchViewController: UIViewController, NibLoadable, FoodInformationDelega
         foodInformation = foodList
     }
 
-
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         guard let searchText = searchBarText.text else { return }
-        let filteredSearchText = searchText.replacingOccurrences(of: " ", with: "+")
+
+        let filteredText = filterText(with: searchText)
+        
         if searchText == "" {
             searchBarText.text = "Enter your meal"
         } else {
-            viewModel.getRecipeInformation(with: filteredSearchText)
+            viewModel.getRecipeInformation(with: filteredText)
             tableView.reloadData()
         }
+    }
+
+    private func filterText(with text: String) -> String {
+        let trimmedSearchText = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        let filteredSearchText = trimmedSearchText.replacingOccurrences(of: " ", with: "+")
+        return filteredSearchText
     }
 }
 
