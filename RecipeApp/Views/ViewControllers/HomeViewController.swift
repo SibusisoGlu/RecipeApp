@@ -11,13 +11,26 @@ class HomeViewController: UIViewController, NibLoadable {
     }
 
     private func setUpNavigationItem() {
-        let favouritesButton = UIBarButtonItem(title: "Favs", style: .plain, target: self, action: #selector(goToHelp))
-        navigationItem.rightBarButtonItem = favouritesButton
+        let favouritesButton = UIBarButtonItem(title: "Favs",
+                                               style: .plain,
+                                               target: self,
+                                               action: #selector(goToFavourites))
+
+        let searchButton = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"),
+                                               style: .plain,
+                                               target: self,
+                                               action: #selector(goToSearch))
+        navigationItem.rightBarButtonItems = [favouritesButton, searchButton]
     }
 
-    @objc func goToHelp() {
+    @objc func goToFavourites() {
         let favoutitesViewController = FavoutiesViewController()
         navigationController?.pushViewController(favoutitesViewController, animated: true)
+    }
+
+    @objc func goToSearch() {
+        let searchViewController = SearchViewController()
+        navigationController?.pushViewController(searchViewController, animated: true)
     }
 
     private func setUpBottomContainer() {
