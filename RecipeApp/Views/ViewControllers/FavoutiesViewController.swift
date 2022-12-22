@@ -21,6 +21,9 @@ class FavoutiesViewController: UIViewController, NibLoadable {
 
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         print(searchField.text)
+        print(databaseHandler.meals[0].mealInstructions)
+        print(databaseHandler.meals[0].mealIngredients)
+
     }
 }
 
