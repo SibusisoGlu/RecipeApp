@@ -33,6 +33,7 @@ class FoodDetailView: UIView {
 
         data.isFavourite.toggle()
         setUpView()
+        
         if data.isFavourite {
             databaseHandler.addMeal(mealData: data)
         } else {

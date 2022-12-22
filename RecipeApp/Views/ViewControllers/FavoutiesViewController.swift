@@ -41,4 +41,15 @@ extension FavoutiesViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigateToDetailView(with: indexPath.row)
+    }
+
+    private func navigateToDetailView(with indexPath: Int) {
+        let data = databaseHandler.meals[indexPath]
+        let viewController = FavouritesDetailViewController()
+//        viewController.prepareView(with: data)
+        show(viewController, sender: self)
+    }
 }

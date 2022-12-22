@@ -37,6 +37,8 @@
 		5CA0B31C29532A1100645E53 /* FavoutiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA0B31A29532A1100645E53 /* FavoutiesViewController.xib */; };
 		5CA0B31F29532D7500645E53 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA0B31D29532D7500645E53 /* FoodTableViewCell.swift */; };
 		5CA0B32029532D7500645E53 /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA0B31E29532D7500645E53 /* FoodTableViewCell.xib */; };
+		5CA0B33B2954709B00645E53 /* FavouritesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA0B3392954709B00645E53 /* FavouritesDetailViewController.swift */; };
+		5CA0B33C2954709B00645E53 /* FavouritesDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA0B33A2954709B00645E53 /* FavouritesDetailViewController.xib */; };
 		5CAEADFB2946FEEB003D5BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEADFA2946FEEB003D5BA0 /* AppDelegate.swift */; };
 		5CAEADFD2946FEEB003D5BA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEADFC2946FEEB003D5BA0 /* SceneDelegate.swift */; };
 		5CAEAE022946FEEB003D5BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CAEAE002946FEEB003D5BA0 /* Main.storyboard */; };
@@ -82,6 +84,8 @@
 		5CA0B31A29532A1100645E53 /* FavoutiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoutiesViewController.xib; sourceTree = "<group>"; };
 		5CA0B31D29532D7500645E53 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		5CA0B31E29532D7500645E53 /* FoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
+		5CA0B3392954709B00645E53 /* FavouritesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesDetailViewController.swift; sourceTree = "<group>"; };
+		5CA0B33A2954709B00645E53 /* FavouritesDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesDetailViewController.xib; sourceTree = "<group>"; };
 		5CAEADF72946FEEB003D5BA0 /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAEADFA2946FEEB003D5BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CAEADFC2946FEEB003D5BA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 				5CA0B3102952D31A00645E53 /* SearchViewController.xib */,
 				5CA0B31929532A1100645E53 /* FavoutiesViewController.swift */,
 				5CA0B31A29532A1100645E53 /* FavoutiesViewController.xib */,
+				5CA0B3392954709B00645E53 /* FavouritesDetailViewController.swift */,
+				5CA0B33A2954709B00645E53 /* FavouritesDetailViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 				5CA0B3122952D31A00645E53 /* SearchViewController.xib in Resources */,
 				5C3C54FF2950A736000D1B37 /* SegmentControlCell.xib in Resources */,
 				5CA0B31C29532A1100645E53 /* FavoutiesViewController.xib in Resources */,
+				5CA0B33C2954709B00645E53 /* FavouritesDetailViewController.xib in Resources */,
 				5CAEAE022946FEEB003D5BA0 /* Main.storyboard in Resources */,
 				5CE75D4329470C1700F05EE3 /* HomeViewController.xib in Resources */,
 			);
@@ -373,6 +380,7 @@
 				5CE75D4229470C1700F05EE3 /* HomeViewController.swift in Sources */,
 				5C3C54EF29505F8E000D1B37 /* UIViewConstraintLayout.swift in Sources */,
 				5CAEADFB2946FEEB003D5BA0 /* AppDelegate.swift in Sources */,
+				5CA0B33B2954709B00645E53 /* FavouritesDetailViewController.swift in Sources */,
 				5CE75D4E294716AF00F05EE3 /* NibLoadable.swift in Sources */,
 				5CA0B3162952DBC400645E53 /* Meal+CoreDataProperties.swift in Sources */,
 				5C517299294AF3790025DC37 /* DetailCollectionViewSections.swift in Sources */,

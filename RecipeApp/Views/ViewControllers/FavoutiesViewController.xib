@@ -21,13 +21,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJQ-Oh-kbu">
-                    <rect key="frame" x="16" y="76" width="301" height="34"/>
+                    <rect key="frame" x="16" y="96" width="301" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QBT-IL-qMG">
+                    <rect key="frame" x="0.0" y="164" width="393" height="654"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="QBT-IL-qMG" secondAttribute="height" multiplier="131:218" id="uUH-wV-VZV"/>
+                    </constraints>
+                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOy-nK-nfJ">
-                    <rect key="frame" x="325" y="76" width="52" height="35"/>
+                    <rect key="frame" x="325" y="96" width="52" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
@@ -35,14 +42,14 @@
                         <action selector="searchButtonPressed:" destination="-1" eventType="touchUpInside" id="mYD-9a-MRC"/>
                     </connections>
                 </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QBT-IL-qMG">
-                    <rect key="frame" x="0.0" y="139" width="393" height="679"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="QBT-IL-qMG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Gag-KM-8o0"/>
+                <constraint firstItem="QBT-IL-qMG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="o9T-A8-4a3"/>
+                <constraint firstItem="QBT-IL-qMG" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="v5u-st-l9X"/>
+            </constraints>
             <point key="canvasLocation" x="-16.030534351145036" y="19.718309859154932"/>
         </view>
     </objects>
