@@ -1,34 +1,23 @@
 import UIKit
 
-class SegmentControlView: UIView {
-    @IBOutlet weak private var segmentedControl: UISegmentedControl!
-    @IBOutlet weak private var tableView: UITableView!
+class FavouritesSegmentControl: UIView {
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var tableView: UITableView!
 
-    var foodStepData: [Step] = []
-    private var steps: [String] = []
-    private var ingredients: [String] = []
+    var steps: [String] = []
+    var ingredients: [String] = []
 
     func prepareView() {
         tableView.dataSource = self
         tableView.register(UINib(nibName: String(describing: SegmentControlCell.self), bundle: nil), forCellReuseIdentifier: String(describing: SegmentControlCell.self))
 
-        segmentedControl.setTitle("Instructions", forSegmentAt: 0)
-        segmentedControl.setTitle("Ingredients", forSegmentAt: 1)
-    }
-
-    func generateData() {
-        for step in foodStepData {
-            steps.append(step.step ?? "")
-            guard let ingredientData = step.ingredients else { return }
-            for ingredient in ingredientData {
-                ingredients.append(ingredient.name ?? "")
-            }
-        }
+        segmentControl.setTitle("Instructions", forSegmentAt: 0)
+        segmentControl.setTitle("Ingredients", forSegmentAt: 1)
     }
 
     lazy var rowsToDisplay = steps
 
-    @IBAction func SegmentControlPressed(_ sender: UISegmentedControl) {
+    @IBAction func segmentValuePressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
             rowsToDisplay = steps
@@ -40,10 +29,12 @@ class SegmentControlView: UIView {
             rowsToDisplay = []
             tableView.reloadData()
         }
+        print(sender.selectedSegmentIndex)
     }
+
 }
 
-extension SegmentControlView: UITableViewDataSource {
+extension FavouritesSegmentControl: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         rowsToDisplay.count
     }
@@ -62,4 +53,5 @@ extension SegmentControlView: UITableViewDataSource {
             return cell
         }
     }
+
 }
