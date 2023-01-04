@@ -29,7 +29,6 @@ class FavouritesSegmentControl: UIView {
             rowsToDisplay = []
             tableView.reloadData()
         }
-        print(sender.selectedSegmentIndex)
     }
 
 }

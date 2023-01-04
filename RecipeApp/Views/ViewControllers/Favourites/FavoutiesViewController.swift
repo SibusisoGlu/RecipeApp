@@ -13,6 +13,11 @@ class FavoutiesViewController: UIViewController, NibLoadable {
         setUpTableView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        databaseHandler.loadMeals()
+        tableView.reloadData()
+    }
+
     private func setUpTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -49,6 +54,7 @@ extension FavoutiesViewController: UITableViewDelegate, UITableViewDataSource {
     private func navigateToDetailView(with indexPath: Int) {
         let data = databaseHandler.meals[indexPath]
         let viewController = FavouritesDetailViewController()
+        viewController.itemIndex = indexPath
         viewController.prepareView(with: data)
         show(viewController, sender: self)
     }

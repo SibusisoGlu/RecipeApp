@@ -1,10 +1,11 @@
 import UIKit
 
-class FavouritesDetailViewController: UIViewController, NibLoadable {
+class FavouritesDetailViewController: UIViewController, NibLoadable, Favouritable {
     @IBOutlet weak var topContainer: UIView!
     @IBOutlet weak var bottomContainer: UIView!
 
     var data: Meal?
+    var itemIndex: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,19 +17,25 @@ class FavouritesDetailViewController: UIViewController, NibLoadable {
         data = databaseData
     }
 
-    private static func createTopView(with mealInformation: Meal) -> FavouritesDetailView? {
+    private static func createTopView(with mealInformation: Meal, and index: Int) -> FavouritesDetailView? {
         let bundle = Bundle.main
         guard let view = bundle.loadNibNamed("FavouritesDetailView", owner: self)?.first as? FavouritesDetailView else {
             return nil
         }
 
         view.foodData = mealInformation
+        view.favouriteDelegate = self as? Favouritable
+        view.index = index
         view.setUpView()
         return view
     }
 
+    func toggleFavourite(for view: UIView) {
+        data?.isFavourited.toggle()
+    }
+
     private func addTopContainerView() {
-        if let view = FavouritesDetailViewController.createTopView(with: data ?? Meal()) {
+        if let view = FavouritesDetailViewController.createTopView(with: data ?? Meal(), and: itemIndex) {
             self.topContainer.addSubview(view)
             view.pinEdges(to: self.topContainer)
         }
