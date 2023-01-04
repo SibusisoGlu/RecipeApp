@@ -20,15 +20,15 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PCp-eR-pmW">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PCp-eR-pmW">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXE-rY-D2W">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="379.66666666666669"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="455"/>
                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nB-jK-Lu2">
-                            <rect key="frame" x="0.0" y="379.66666666666674" width="393" height="379.33333333333326"/>
+                            <rect key="frame" x="0.0" y="460" width="393" height="358"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                     </subviews>
@@ -37,8 +37,8 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="PCp-eR-pmW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="B8Z-Se-msc"/>
                 <constraint firstItem="PCp-eR-pmW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="J4a-Mx-yAf"/>
-                <constraint firstItem="PCp-eR-pmW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Jjn-NN-wbg"/>
                 <constraint firstItem="PCp-eR-pmW" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="RST-OK-Kzv"/>
                 <constraint firstItem="PCp-eR-pmW" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tJH-8u-ToF"/>
             </constraints>

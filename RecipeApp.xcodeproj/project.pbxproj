@@ -39,6 +39,8 @@
 		5CA0B32029532D7500645E53 /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA0B31E29532D7500645E53 /* FoodTableViewCell.xib */; };
 		5CA0B33B2954709B00645E53 /* FavouritesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA0B3392954709B00645E53 /* FavouritesDetailViewController.swift */; };
 		5CA0B33C2954709B00645E53 /* FavouritesDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA0B33A2954709B00645E53 /* FavouritesDetailViewController.xib */; };
+		5CA8627A29654BF500344ED2 /* FavouritesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA8627929654BF500344ED2 /* FavouritesDetailView.swift */; };
+		5CA8627C29654C1C00344ED2 /* FavouritesDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA8627B29654C1C00344ED2 /* FavouritesDetailView.xib */; };
 		5CAEADFB2946FEEB003D5BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEADFA2946FEEB003D5BA0 /* AppDelegate.swift */; };
 		5CAEADFD2946FEEB003D5BA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEADFC2946FEEB003D5BA0 /* SceneDelegate.swift */; };
 		5CAEAE022946FEEB003D5BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CAEAE002946FEEB003D5BA0 /* Main.storyboard */; };
@@ -88,6 +90,8 @@
 		5CA0B31E29532D7500645E53 /* FoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
 		5CA0B3392954709B00645E53 /* FavouritesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesDetailViewController.swift; sourceTree = "<group>"; };
 		5CA0B33A2954709B00645E53 /* FavouritesDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesDetailViewController.xib; sourceTree = "<group>"; };
+		5CA8627929654BF500344ED2 /* FavouritesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesDetailView.swift; sourceTree = "<group>"; };
+		5CA8627B29654C1C00344ED2 /* FavouritesDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesDetailView.xib; sourceTree = "<group>"; };
 		5CAEADF72946FEEB003D5BA0 /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAEADFA2946FEEB003D5BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CAEADFC2946FEEB003D5BA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				5C3C550A295194E6000D1B37 /* FoodDetailView.xib */,
 				5C3C54EA295037DE000D1B37 /* SegmentControlView.swift */,
 				5C3C54EC295037F8000D1B37 /* SegmentControlView.xib */,
+				5CA8627929654BF500344ED2 /* FavouritesDetailView.swift */,
+				5CA8627B29654C1C00344ED2 /* FavouritesDetailView.xib */,
 				5CE9D3DB295569D000DAAF27 /* FavouritesSegmentControl.swift */,
 				5CE9D3DD295569E700DAAF27 /* FavouritesSegmentControl.xib */,
 			);
@@ -200,10 +206,7 @@
 				5C51729B294B4CD90025DC37 /* DetailViewController.xib */,
 				5CA0B30F2952D31A00645E53 /* SearchViewController.swift */,
 				5CA0B3102952D31A00645E53 /* SearchViewController.xib */,
-				5CA0B31929532A1100645E53 /* FavoutiesViewController.swift */,
-				5CA0B31A29532A1100645E53 /* FavoutiesViewController.xib */,
-				5CA0B3392954709B00645E53 /* FavouritesDetailViewController.swift */,
-				5CA0B33A2954709B00645E53 /* FavouritesDetailViewController.xib */,
+				5CA8627D29654C6500344ED2 /* Favourites */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -215,6 +218,17 @@
 				5C8426AC2949D2E900CD33CB /* HeaderCell.xib */,
 			);
 			path = HeaderCell;
+			sourceTree = "<group>";
+		};
+		5CA8627D29654C6500344ED2 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				5CA0B31929532A1100645E53 /* FavoutiesViewController.swift */,
+				5CA0B31A29532A1100645E53 /* FavoutiesViewController.xib */,
+				5CA0B3392954709B00645E53 /* FavouritesDetailViewController.swift */,
+				5CA0B33A2954709B00645E53 /* FavouritesDetailViewController.xib */,
+			);
+			path = Favourites;
 			sourceTree = "<group>";
 		};
 		5CAEADEE2946FEEB003D5BA0 = {
@@ -372,6 +386,7 @@
 				5CA0B33C2954709B00645E53 /* FavouritesDetailViewController.xib in Resources */,
 				5CAEAE022946FEEB003D5BA0 /* Main.storyboard in Resources */,
 				5CE75D4329470C1700F05EE3 /* HomeViewController.xib in Resources */,
+				5CA8627C29654C1C00344ED2 /* FavouritesDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +408,7 @@
 				5C517299294AF3790025DC37 /* DetailCollectionViewSections.swift in Sources */,
 				5CE9D3DC295569D000DAAF27 /* FavouritesSegmentControl.swift in Sources */,
 				5CAEADFD2946FEEB003D5BA0 /* SceneDelegate.swift in Sources */,
+				5CA8627A29654BF500344ED2 /* FavouritesDetailView.swift in Sources */,
 				5CE75D5F294727B600F05EE3 /* Food.swift in Sources */,
 				5C5C87382947721B00CB9B64 /* FoodDetailModel.swift in Sources */,
 				5C51729C294B4CD90025DC37 /* DetailViewController.swift in Sources */,
