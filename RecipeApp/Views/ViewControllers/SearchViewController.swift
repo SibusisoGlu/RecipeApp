@@ -10,6 +10,7 @@ class SearchViewController: UIViewController, NibLoadable, FoodInformationDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
+        self.searchBarText.delegate = self
         setUpTableView()
     }
 
@@ -32,6 +33,7 @@ class SearchViewController: UIViewController, NibLoadable, FoodInformationDelega
             searchBarText.text = "Enter your meal"
         } else {
             viewModel.getRecipeInformation(with: filteredText)
+            view.endEditing(true)
             tableView.reloadData()
         }
     }
@@ -68,5 +70,15 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let viewController = DetailViewController()
         viewController.prepareView(with: data)
         show(viewController, sender: self)
+    }
+}
+
+extension SearchViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return searchBarText.resignFirstResponder()
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

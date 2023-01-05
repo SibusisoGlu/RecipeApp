@@ -49,13 +49,29 @@ class HomeViewController: UIViewController, NibLoadable {
         return view
     }
 
+    private static func createNoDataView() -> NoMealView? {
+        let bundle = Bundle.main
+        guard let view = bundle.loadNibNamed("NoMealView", owner: self)?.first as? NoMealView else {
+            return nil
+        }
+
+        return view
+    }
+
     private func addTopView() {
         let count = databaseHandler.meals.count
-        let randomInt = Int.random(in: 1...count)
 
-        if let view = HomeViewController.createBottomView(with: databaseHandler.meals[randomInt - 1]) {
-            self.personalMealView.addSubview(view)
-            view.pinEdges(to: personalMealView)
+        if count == 0 {
+            if let view = HomeViewController.createNoDataView() {
+                self.personalMealView.addSubview(view)
+                view.pinEdges(to: personalMealView)
+            }
+        } else {
+            let randomInt = Int.random(in: 1...count)
+            if let view = HomeViewController.createBottomView(with: databaseHandler.meals[randomInt - 1]) {
+                self.personalMealView.addSubview(view)
+                view.pinEdges(to: personalMealView)
+            }
         }
     }
 
@@ -75,5 +91,4 @@ class HomeViewController: UIViewController, NibLoadable {
 
         controller.didMove(toParent: self)
     }
-
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C3735B02966B8C60075AA23 /* NoMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3735AF2966B8C60075AA23 /* NoMealView.swift */; };
+		5C3735B22966B8DB0075AA23 /* NoMealView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C3735B12966B8DB0075AA23 /* NoMealView.xib */; };
 		5C3C54EB295037DE000D1B37 /* SegmentControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C54EA295037DE000D1B37 /* SegmentControlView.swift */; };
 		5C3C54ED295037F8000D1B37 /* SegmentControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C3C54EC295037F8000D1B37 /* SegmentControlView.xib */; };
 		5C3C54EF29505F8E000D1B37 /* UIViewConstraintLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C54EE29505F8E000D1B37 /* UIViewConstraintLayout.swift */; };
@@ -58,6 +60,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C3735AF2966B8C60075AA23 /* NoMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMealView.swift; sourceTree = "<group>"; };
+		5C3735B12966B8DB0075AA23 /* NoMealView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoMealView.xib; sourceTree = "<group>"; };
 		5C3C54EA295037DE000D1B37 /* SegmentControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlView.swift; sourceTree = "<group>"; };
 		5C3C54EC295037F8000D1B37 /* SegmentControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentControlView.xib; sourceTree = "<group>"; };
 		5C3C54EE29505F8E000D1B37 /* UIViewConstraintLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewConstraintLayout.swift; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 				5CA8627B29654C1C00344ED2 /* FavouritesDetailView.xib */,
 				5CE9D3DB295569D000DAAF27 /* FavouritesSegmentControl.swift */,
 				5CE9D3DD295569E700DAAF27 /* FavouritesSegmentControl.xib */,
+				5C3735AF2966B8C60075AA23 /* NoMealView.swift */,
+				5C3735B12966B8DB0075AA23 /* NoMealView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 				5CA0B33C2954709B00645E53 /* FavouritesDetailViewController.xib in Resources */,
 				5CAEAE022946FEEB003D5BA0 /* Main.storyboard in Resources */,
 				5CE75D4329470C1700F05EE3 /* HomeViewController.xib in Resources */,
+				5C3735B22966B8DB0075AA23 /* NoMealView.xib in Resources */,
 				5CA8627C29654C1C00344ED2 /* FavouritesDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +419,7 @@
 				5CE75D5F294727B600F05EE3 /* Food.swift in Sources */,
 				5C5C87382947721B00CB9B64 /* FoodDetailModel.swift in Sources */,
 				5C51729C294B4CD90025DC37 /* DetailViewController.swift in Sources */,
+				5C3735B02966B8C60075AA23 /* NoMealView.swift in Sources */,
 				5C3C54FE2950A736000D1B37 /* SegmentControlCell.swift in Sources */,
 				5CA0B31B29532A1100645E53 /* FavoutiesViewController.swift in Sources */,
 				5CA0B31829531A4400645E53 /* FoodDatabaseModel.swift in Sources */,
@@ -575,6 +583,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GZ2NG9D5X5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecipeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -602,6 +611,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GZ2NG9D5X5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecipeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
