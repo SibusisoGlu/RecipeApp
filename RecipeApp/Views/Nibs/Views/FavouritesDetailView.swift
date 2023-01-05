@@ -17,7 +17,17 @@ class FavouritesDetailView: UIView {
 
         imageView.loadImage(fromURL: data.mealImage ?? "")
         titleLable.text = data.mealTitle
-        subTitleLabel.text = "\(data.mealReadyInMinutes) mins"
+        titleLable.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+
+        let attachment = NSTextAttachment()
+        attachment.image = UIImage(systemName: "clock")
+
+        let imageString = NSMutableAttributedString(attachment: attachment)
+        let textString = NSAttributedString(string: " \(data.mealReadyInMinutes) mins")
+        imageString.append(textString)
+
+        subTitleLabel.attributedText = imageString
+        subTitleLabel.sizeToFit()
 
         checkFavourite(isFavourite: data.isFavourited)
     }
