@@ -44,12 +44,16 @@ class HomeViewController: UIViewController, NibLoadable {
         }
 
         view.foodData = data
+        view.favouriteButton.isHidden = true
         view.setUpView()
         return view
     }
 
     private func addTopView() {
-        if let view = HomeViewController.createBottomView(with: databaseHandler.meals[1]) {
+        let count = databaseHandler.meals.count
+        let randomInt = Int.random(in: 1...count)
+
+        if let view = HomeViewController.createBottomView(with: databaseHandler.meals[randomInt - 1]) {
             self.personalMealView.addSubview(view)
             view.pinEdges(to: personalMealView)
         }
