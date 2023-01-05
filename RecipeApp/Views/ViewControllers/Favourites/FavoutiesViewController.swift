@@ -5,7 +5,7 @@ class FavoutiesViewController: UIViewController, NibLoadable {
     @IBOutlet weak var tableView: UITableView!
 
     private let databaseHandler = DatabaseHandler()
-    private var data: [Meal] = []
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,5 +57,38 @@ extension FavoutiesViewController: UITableViewDelegate, UITableViewDataSource {
         viewController.itemIndex = indexPath
         viewController.prepareView(with: data)
         show(viewController, sender: self)
+    }
+}
+
+extension FavoutiesViewController {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let removeAction = UIContextualAction(style: .normal, title: "Remove") { action, view, completion in
+            let removeMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this Meal?", preferredStyle: .alert)
+
+            let yes = UIAlertAction(title: "Yes", style: .default) { action in
+                self.databaseHandler.meals[indexPath.row].isFavourited = !self.databaseHandler.meals[indexPath.row].isFavourited
+                self.context.delete(self.databaseHandler.meals[indexPath.row])
+                self.databaseHandler.meals.remove(at: indexPath.row)
+
+                self.databaseHandler.saveData()
+                self.tableView.reloadData()
+                self.databaseHandler.loadMeals()
+            }
+
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel) { action in
+                return
+            }
+
+            removeMessage.addAction(yes)
+            removeMessage.addAction(cancel)
+
+            self.present(removeMessage, animated: true, completion: nil)
+        }
+
+        return UISwipeActionsConfiguration(actions: [removeAction])
     }
 }
