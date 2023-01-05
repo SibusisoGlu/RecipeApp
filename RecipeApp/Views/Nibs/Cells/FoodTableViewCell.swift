@@ -19,7 +19,7 @@ class FoodTableViewCell: UITableViewCell {
     }
 
     private func setUpView() {
-        cellImageView.layer.cornerRadius = 100
+        cellImageView.layer.cornerRadius = cellImageView.frame.size.height / 2
         cellImageView.clipsToBounds = true
 
         cellView.layer.cornerRadius = 15

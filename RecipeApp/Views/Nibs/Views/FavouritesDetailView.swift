@@ -19,23 +19,9 @@ class FavouritesDetailView: UIView {
         titleLable.text = data.mealTitle
         titleLable.font = UIFont.systemFont(ofSize: 20, weight: .bold)
 
-//        imageStringConfigurator(with: data.mealReadyInMinutes)
         ImageString.imageStringConfigurator(with: subTitleLabel, and: String(data.mealReadyInMinutes))
 
         checkFavourite(isFavourite: data.isFavourited)
-    }
-
-    func imageStringConfigurator(with data: Int16) -> UILabel {
-        let attachment = NSTextAttachment()
-        attachment.image = UIImage(systemName: "clock")
-
-        let imageString = NSMutableAttributedString(attachment: attachment)
-        let textString = NSAttributedString(string: " \(data) mins")
-        imageString.append(textString)
-
-        subTitleLabel.attributedText = imageString
-        subTitleLabel.sizeToFit()
-        return subTitleLabel
     }
 
     @IBAction func favouriteButtonPressed(_ sender: UIButton) {
@@ -49,7 +35,6 @@ class FavouritesDetailView: UIView {
         if data.isFavourited {
 
         } else {
-//             search through database to see if exists then remove
             databaseHandler.loadMeals()
             self.context.delete(self.databaseHandler.meals[index])
             databaseHandler.saveData()
