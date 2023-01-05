@@ -4,8 +4,12 @@ class HomeViewController: UIViewController, NibLoadable {
     @IBOutlet weak var personalMealView: UIView!
     @IBOutlet weak var recommendedMealsView: UIView!
 
+    private let databaseHandler = DatabaseHandler()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        databaseHandler.loadMeals()
+        addTopView()
         setUpBottomContainer()
         setUpNavigationItem()
     }
@@ -31,6 +35,24 @@ class HomeViewController: UIViewController, NibLoadable {
     @objc func goToSearch() {
         let searchViewController = SearchViewController()
         navigationController?.pushViewController(searchViewController, animated: true)
+    }
+
+    private static func createBottomView(with data: Meal) -> FavouritesDetailView? {
+        let bundle = Bundle.main
+        guard let view = bundle.loadNibNamed("FavouritesDetailView", owner: self)?.first as? FavouritesDetailView else {
+            return nil
+        }
+
+        view.foodData = data
+        view.setUpView()
+        return view
+    }
+
+    private func addTopView() {
+        if let view = HomeViewController.createBottomView(with: databaseHandler.meals[1]) {
+            self.personalMealView.addSubview(view)
+            view.pinEdges(to: personalMealView)
+        }
     }
 
     private func setUpBottomContainer() {
