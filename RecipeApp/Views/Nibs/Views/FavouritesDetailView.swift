@@ -18,7 +18,6 @@ class FavouritesDetailView: UIView {
         imageView.loadImage(fromURL: data.mealImage ?? "")
         titleLable.text = data.mealTitle
         titleLable.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-
         ImageString.imageStringConfigurator(with: subTitleLabel, and: String(data.mealReadyInMinutes))
 
         checkFavourite(isFavourite: data.isFavourited)

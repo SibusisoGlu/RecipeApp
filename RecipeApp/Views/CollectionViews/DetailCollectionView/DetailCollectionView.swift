@@ -9,6 +9,8 @@ class DetailCollectionView: UICollectionViewController, FoodInformationDelegate 
     private var viewModel = RecipeViewModel()
     private var foodInformation: [FoodDetailModel] = []
 
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self

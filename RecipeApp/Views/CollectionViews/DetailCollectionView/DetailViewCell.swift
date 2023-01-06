@@ -8,18 +8,20 @@ class DetailViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setUpViewStyle()
     }
 
     private func setUpViewStyle() {
         detailView.layer.cornerRadius = 10
-        detailView.backgroundColor = .systemTeal
+        detailView.layer.borderWidth = 1
+        detailView.layer.borderColor = UIColor.systemGray6.cgColor
     }
 
     func setUpView(image: String, foodTitle: String, foodSubtitle: Int) {
         imageView.loadImage(fromURL: image)
         title.text = foodTitle
         subtitle.text = "\(foodSubtitle) mins"
+        ImageString.imageStringConfigurator(with: subtitle, and: String(foodSubtitle))
     }
 
 }

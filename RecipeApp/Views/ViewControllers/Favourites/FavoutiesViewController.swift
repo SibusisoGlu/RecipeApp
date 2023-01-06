@@ -1,4 +1,5 @@
 import UIKit
+import CoreData
 
 class FavoutiesViewController: UIViewController, NibLoadable {
     @IBOutlet weak var searchField: UITextField!
@@ -6,10 +7,11 @@ class FavoutiesViewController: UIViewController, NibLoadable {
 
     private let databaseHandler = DatabaseHandler()
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private let request: NSFetchRequest<Meal> = Meal.fetchRequest()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        databaseHandler.loadMeals()
+//        databaseHandler.loadMeals()
         setUpTableView()
     }
 
@@ -25,19 +27,16 @@ class FavoutiesViewController: UIViewController, NibLoadable {
     }
 
     @IBAction func searchButtonPressed(_ sender: UIButton) {
-        print(searchField.text)
-        print(databaseHandler.meals[0].mealInstructions)
-        print(databaseHandler.meals[0].mealIngredients)
-
+        searchMeal()
     }
 }
 
 extension FavoutiesViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        databaseHandler.meals.count
-    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        databaseHandler.meals.count
+//    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return databaseHandler.meals.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,15 +61,15 @@ extension FavoutiesViewController: UITableViewDelegate, UITableViewDataSource {
         show(viewController, sender: self)
     }
 
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        headerView.backgroundColor = view.backgroundColor
-        return headerView
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 5
-    }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView = UIView()
+//        headerView.backgroundColor = view.backgroundColor
+//        return headerView
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 5
+//    }
 }
 
 extension FavoutiesViewController {
@@ -103,5 +102,22 @@ extension FavoutiesViewController {
         }
 
         return UISwipeActionsConfiguration(actions: [removeAction])
+    }
+}
+
+extension FavoutiesViewController {
+    func searchMeal() {
+        if let searchText = searchField.text {
+            request.predicate = NSPredicate(format: "mealTitle CONTAINS[cd] %@", searchText)
+            request.sortDescriptors = [NSSortDescriptor(key: "mealTitle", ascending: true)]
+
+            do {
+                databaseHandler.meals = try context.fetch(request)
+            } catch {
+                print("Error fetching tasks: \(error)")
+            }
+
+            tableView.reloadData()
+        }
     }
 }
