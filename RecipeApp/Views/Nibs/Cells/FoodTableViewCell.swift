@@ -30,8 +30,8 @@ class FoodTableViewCell: UITableViewCell {
     func setUpCell(image: String, title: String, firstSubtitle: String, secondSubtitle: String) {
         cellImageView.loadImage(fromURL: image)
         cellTitle.text = title
-//        ImageString.imageStringConfigurator(with: cellFirstSubtitle, and: firstSubtitle)
-        cellSecondSubtitle.text = secondSubtitle
+        ImageString.imageStringConfigurator(with: cellFirstSubtitle, and: firstSubtitle)
+        cellSecondSubtitle.text = "\(secondSubtitle) servings"
     }
     
 }

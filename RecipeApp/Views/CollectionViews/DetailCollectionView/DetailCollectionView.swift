@@ -9,12 +9,11 @@ class DetailCollectionView: UICollectionViewController, FoodInformationDelegate 
     private var viewModel = RecipeViewModel()
     private var foodInformation: [FoodDetailModel] = []
 
-    
+    let meals = ["pasta", "chicken", "steak", "cheese", "potato", "prawns", "soup", "stir-fry", "rice"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
-        viewModel.getRecipeInformation(with: "pasta")
         collectionView.dataSource = dataSource
         setUpView()
     }
@@ -23,6 +22,15 @@ class DetailCollectionView: UICollectionViewController, FoodInformationDelegate 
         collectionView.collectionViewLayout = Layouts.categoryLayout()
         collectionView.register(UINib(nibName: String(describing: DetailViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: DetailViewCell.self))
         collectionView.register(UINib(nibName: String(describing: HeaderCell.self), bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: HeaderCell.self))
+
+        let randomMeal = getRandomMeal()
+        viewModel.getRecipeInformation(with: randomMeal)
+    }
+
+    func getRandomMeal() -> String {
+        let count = meals.count
+        let randomInt = Int.random(in: 1...count)
+        return meals[randomInt]
     }
 
     func didRetrieveFoodInformation(foodList: [FoodDetailModel]) {
