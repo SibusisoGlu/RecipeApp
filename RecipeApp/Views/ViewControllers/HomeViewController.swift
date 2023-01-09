@@ -15,7 +15,7 @@ class HomeViewController: UIViewController, NibLoadable {
     }
 
     private func setUpNavigationItem() {
-        let favouritesButton = UIBarButtonItem(title: "Favs",
+        let favouritesButton = UIBarButtonItem(image: UIImage(systemName: "heart.fill"),
                                                style: .plain,
                                                target: self,
                                                action: #selector(goToFavourites))
@@ -46,6 +46,7 @@ class HomeViewController: UIViewController, NibLoadable {
         view.foodData = data
         view.favouriteButton.isHidden = true
         view.setUpView()
+        view.setUpSummary(isHomeView: true)
         return view
     }
 

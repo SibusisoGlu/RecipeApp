@@ -20,7 +20,8 @@ class FoodDetailView: UIView {
 
         imageView.loadImage(fromURL: data.foodImage)
         foodTitle.text = data.foodTitle
-        foodTime.text = "\(data.foodReadyInMinutes) mins"
+        foodTitle.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        ImageString.imageStringConfigurator(with: foodTime, and: String(data.foodReadyInMinutes))
 
         checkFavourite(isFavourite: data.isFavourite)
         databaseHandler.loadMeals()

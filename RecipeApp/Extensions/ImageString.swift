@@ -5,6 +5,7 @@ class ImageString {
     static func imageStringConfigurator(with label: UILabel, and data: String) -> UILabel {
         let attachment = NSTextAttachment()
         attachment.image = UIImage(systemName: "clock")
+        attachment.image?.withTintColor(.blue)
 
         let imageString = NSMutableAttributedString(attachment: attachment)
         let textString = NSAttributedString(string: " \(data) mins")

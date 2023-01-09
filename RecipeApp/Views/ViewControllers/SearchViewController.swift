@@ -54,7 +54,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let data = foodInformation[indexPath.row]
 
         if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FoodTableViewCell.self), for: indexPath) as? FoodTableViewCell {
-            cell.setUpCell(image: data.foodImage, title: data.foodTitle, firstSubtitle: String(data.foodReadyInMinutes), secondSubtitle: String(data.foodServings))
+            cell.setUpCell(image: data.foodImage, title: data.foodTitle, firstSubtitle: String(data.foodReadyInMinutes), secondSubtitle: "\(data.foodServings) servings")
             return cell
         } else {
             return UITableViewCell()

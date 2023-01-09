@@ -42,7 +42,7 @@ extension FavoutiesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = databaseHandler.meals[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FoodTableViewCell.self), for: indexPath) as? FoodTableViewCell {
-            cell.setUpCell(image: data.mealImage ?? "", title: data.mealTitle ?? "", firstSubtitle: "\(data.mealReadyInMinutes) mins", secondSubtitle: "\(data.mealServings) servings")
+            cell.setUpCell(image: data.mealImage ?? "", title: data.mealTitle ?? "", firstSubtitle: String(data.mealReadyInMinutes), secondSubtitle: "\(data.mealServings) servings")
             return cell
         } else {
             return UITableViewCell()

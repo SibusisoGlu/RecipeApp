@@ -6,6 +6,8 @@ class FavouritesDetailView: UIView {
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var favouriteButton: UIButton!
 
+    @IBOutlet weak var detailLabel: UILabel!
+
     private let databaseHandler = DatabaseHandler()
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var favouriteDelegate: Favouritable?
@@ -21,6 +23,21 @@ class FavouritesDetailView: UIView {
         ImageString.imageStringConfigurator(with: subTitleLabel, and: String(data.mealReadyInMinutes))
 
         checkFavourite(isFavourite: data.isFavourited)
+    }
+
+    func setUpSummary(isHomeView: Bool) {
+        if isHomeView {
+            detailLabel.text = foodData?.mealSummary ?? ""
+            if detailLabel.text!.count > 1 {
+               let readmoreFont = UIFont(name: "Helvetica-Oblique", size: 15.0)
+                let readmoreFontColor = UIColor.blue
+                DispatchQueue.main.async {
+                    self.detailLabel.addTrailing(with: "... ", moreText: "Readmore", moreTextFont: readmoreFont!, moreTextColor: readmoreFontColor)
+                }
+            }
+        } else {
+            detailLabel.isHidden = true
+        }
     }
 
     @IBAction func favouriteButtonPressed(_ sender: UIButton) {

@@ -28,8 +28,9 @@ class DetailCollectionView: UICollectionViewController, FoodInformationDelegate 
     }
 
     func getRandomMeal() -> String {
-        let count = meals.count
-        let randomInt = Int.random(in: 1...count)
+        let count = meals.count - 1
+        let randomInt = Int.random(in: 0...count)
+        print(count)
         return meals[randomInt]
     }
 

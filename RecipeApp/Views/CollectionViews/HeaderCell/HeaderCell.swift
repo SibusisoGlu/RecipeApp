@@ -5,7 +5,7 @@ class HeaderCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        headerText.font = UIFont.systemFont(ofSize: 18, weight: .bold)
     }
 
 }

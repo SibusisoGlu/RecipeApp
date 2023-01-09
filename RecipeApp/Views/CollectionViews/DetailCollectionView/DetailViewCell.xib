@@ -11,23 +11,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DetailViewCell" customModule="RecipeApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="144" height="167"/>
+            <rect key="frame" x="0.0" y="0.0" width="144" height="174"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="144" height="167"/>
+                <rect key="frame" x="0.0" y="0.0" width="144" height="174"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hg-Wi-jz7">
-                        <rect key="frame" x="0.0" y="0.0" width="144" height="167"/>
+                        <rect key="frame" x="0.0" y="0.0" width="144" height="174"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Klz-1B-07o">
-                                <rect key="frame" x="20" y="20" width="104" height="84"/>
+                                <rect key="frame" x="2" y="0.0" width="140" height="113"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Klz-1B-07o" secondAttribute="height" multiplier="26:21" id="dKt-Di-lKh"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Stz-f2-1ez">
-                                <rect key="frame" x="10" y="114" width="124" height="43"/>
+                                <rect key="frame" x="10" y="123" width="124" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvl-3Z-Lj2">
                                         <rect key="frame" x="0.0" y="0.0" width="124" height="20"/>
@@ -39,7 +39,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mde-ca-VjO">
-                                        <rect key="frame" x="0.0" y="25" width="124" height="18"/>
+                                        <rect key="frame" x="0.0" y="25" width="124" height="16"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -54,13 +54,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Klz-1B-07o" firstAttribute="leading" secondItem="1hg-Wi-jz7" secondAttribute="leading" constant="20" id="1Y1-rU-bnV"/>
+                            <constraint firstItem="Klz-1B-07o" firstAttribute="leading" secondItem="1hg-Wi-jz7" secondAttribute="leading" constant="2" id="1Y1-rU-bnV"/>
                             <constraint firstAttribute="bottom" secondItem="Stz-f2-1ez" secondAttribute="bottom" constant="10" id="476-sR-E98"/>
                             <constraint firstAttribute="trailing" secondItem="Stz-f2-1ez" secondAttribute="trailing" constant="10" id="Eji-32-FyZ"/>
                             <constraint firstItem="Stz-f2-1ez" firstAttribute="top" secondItem="Klz-1B-07o" secondAttribute="bottom" constant="10" id="GWr-PC-QNS"/>
                             <constraint firstItem="Stz-f2-1ez" firstAttribute="leading" secondItem="1hg-Wi-jz7" secondAttribute="leading" constant="10" id="Qw3-pi-5qg"/>
-                            <constraint firstItem="Klz-1B-07o" firstAttribute="top" secondItem="1hg-Wi-jz7" secondAttribute="top" constant="20" id="cnc-C5-Tbd"/>
-                            <constraint firstAttribute="trailing" secondItem="Klz-1B-07o" secondAttribute="trailing" constant="20" id="zIm-j5-hJI"/>
+                            <constraint firstItem="Klz-1B-07o" firstAttribute="top" secondItem="1hg-Wi-jz7" secondAttribute="top" id="cnc-C5-Tbd"/>
+                            <constraint firstAttribute="trailing" secondItem="Klz-1B-07o" secondAttribute="trailing" constant="2" id="zIm-j5-hJI"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -72,14 +72,14 @@
                 <constraint firstItem="1hg-Wi-jz7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SIH-Oz-0J3"/>
                 <constraint firstAttribute="trailing" secondItem="1hg-Wi-jz7" secondAttribute="trailing" id="UWB-Dx-ykn"/>
             </constraints>
-            <size key="customSize" width="144" height="167"/>
+            <size key="customSize" width="144" height="174"/>
             <connections>
                 <outlet property="detailView" destination="1hg-Wi-jz7" id="Yc6-f5-q59"/>
                 <outlet property="imageView" destination="Klz-1B-07o" id="Y34-qI-K16"/>
                 <outlet property="subtitle" destination="mde-ca-VjO" id="e2J-bI-icT"/>
                 <outlet property="title" destination="yvl-3Z-Lj2" id="lGb-s8-DUW"/>
             </connections>
-            <point key="canvasLocation" x="166.41221374045801" y="60.91549295774648"/>
+            <point key="canvasLocation" x="166.41221374045801" y="63.380281690140848"/>
         </collectionViewCell>
     </objects>
     <resources>

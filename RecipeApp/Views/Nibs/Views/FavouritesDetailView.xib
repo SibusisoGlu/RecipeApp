@@ -21,13 +21,13 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8m-vI-EsN">
-                    <rect key="frame" x="16" y="296" width="301" height="20.333333333333314"/>
+                    <rect key="frame" x="16" y="274" width="287" height="52"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1j-46-4VX">
-                    <rect key="frame" x="341.66666666666669" y="296" width="41.333333333333314" height="21"/>
+                    <rect key="frame" x="341.66666666666669" y="274" width="41.333333333333314" height="52"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -40,23 +40,38 @@
                         <action selector="favouriteButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="tZE-9D-Qik"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbw-ou-FEF">
+                    <rect key="frame" x="16" y="326" width="361" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Vbw-ou-FEF" secondAttribute="height" multiplier="361:21" id="1hd-sN-CIE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="t8m-vI-EsN" firstAttribute="top" secondItem="vzE-70-3vP" secondAttribute="bottom" constant="32" id="01D-xF-nbz"/>
-                <constraint firstItem="V1j-46-4VX" firstAttribute="top" secondItem="vzE-70-3vP" secondAttribute="bottom" constant="32" id="3IU-3I-foa"/>
+                <constraint firstItem="t8m-vI-EsN" firstAttribute="top" secondItem="vzE-70-3vP" secondAttribute="bottom" constant="10" id="01D-xF-nbz"/>
+                <constraint firstItem="V1j-46-4VX" firstAttribute="top" secondItem="vzE-70-3vP" secondAttribute="bottom" constant="10" id="3IU-3I-foa"/>
                 <constraint firstItem="QfJ-iR-Tkd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="AY0-U6-Tq9"/>
                 <constraint firstItem="vzE-70-3vP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GJ7-9D-NpA"/>
                 <constraint firstAttribute="trailing" secondItem="QfJ-iR-Tkd" secondAttribute="trailing" constant="16" id="INI-r6-v9w"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="t8m-vI-EsN" secondAttribute="trailing" constant="76" id="TeC-r5-akV"/>
                 <constraint firstItem="t8m-vI-EsN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Yb4-7c-3nh"/>
                 <constraint firstAttribute="trailing" secondItem="vzE-70-3vP" secondAttribute="trailing" id="ccM-7j-Q6X"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="V1j-46-4VX" secondAttribute="trailing" constant="10" id="fmD-iH-sX8"/>
+                <constraint firstItem="Vbw-ou-FEF" firstAttribute="top" secondItem="t8m-vI-EsN" secondAttribute="bottom" id="fsh-6p-gz0"/>
+                <constraint firstItem="Vbw-ou-FEF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="hEB-qN-z9j"/>
                 <constraint firstItem="vzE-70-3vP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hFe-Jk-z8H"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vbw-ou-FEF" secondAttribute="trailing" constant="16" id="hqR-wN-WbG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Vbw-ou-FEF" secondAttribute="bottom" constant="5" id="sCH-vh-vHA"/>
+                <constraint firstItem="Vbw-ou-FEF" firstAttribute="top" secondItem="V1j-46-4VX" secondAttribute="bottom" id="uvc-e3-Q48"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="t8m-vI-EsN" secondAttribute="trailing" constant="90" id="xqv-hP-CLb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="detailLabel" destination="Vbw-ou-FEF" id="qJs-k5-7H9"/>
                 <outlet property="favouriteButton" destination="QfJ-iR-Tkd" id="dY5-J5-IMf"/>
                 <outlet property="imageView" destination="vzE-70-3vP" id="bUM-mt-nB9"/>
                 <outlet property="subTitleLabel" destination="V1j-46-4VX" id="Bce-Tt-15G"/>

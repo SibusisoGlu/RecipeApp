@@ -6,7 +6,9 @@ protocol FoodListRetreivable {
 
 class NetworkManager: FoodListRetreivable {
     private let baseURL = "https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true"
-    private let APIKey = "b9c19eab49404c3fab81382adb8d38d7"
+//    private let APIKey = "b9c19eab49404c3fab81382adb8d38d7"
+    private let APIKey = "7566ea30122044dc8e361f6318e94518"
+
 //    var cache = [String: [FoodDetailModel]] = [:]
     var foodModel: [FoodDetailModel] = []
 

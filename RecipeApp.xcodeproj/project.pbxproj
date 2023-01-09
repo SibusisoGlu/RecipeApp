@@ -42,6 +42,7 @@
 		5CA0B32029532D7500645E53 /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA0B31E29532D7500645E53 /* FoodTableViewCell.xib */; };
 		5CA0B33B2954709B00645E53 /* FavouritesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA0B3392954709B00645E53 /* FavouritesDetailViewController.swift */; };
 		5CA0B33C2954709B00645E53 /* FavouritesDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA0B33A2954709B00645E53 /* FavouritesDetailViewController.xib */; };
+		5CA53C1329681EA800AABD73 /* UILableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA53C1229681EA800AABD73 /* UILableExtension.swift */; };
 		5CA8627A29654BF500344ED2 /* FavouritesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA8627929654BF500344ED2 /* FavouritesDetailView.swift */; };
 		5CA8627C29654C1C00344ED2 /* FavouritesDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA8627B29654C1C00344ED2 /* FavouritesDetailView.xib */; };
 		5CAEADFB2946FEEB003D5BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEADFA2946FEEB003D5BA0 /* AppDelegate.swift */; };
@@ -96,6 +97,7 @@
 		5CA0B31E29532D7500645E53 /* FoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
 		5CA0B3392954709B00645E53 /* FavouritesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesDetailViewController.swift; sourceTree = "<group>"; };
 		5CA0B33A2954709B00645E53 /* FavouritesDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesDetailViewController.xib; sourceTree = "<group>"; };
+		5CA53C1229681EA800AABD73 /* UILableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILableExtension.swift; sourceTree = "<group>"; };
 		5CA8627929654BF500344ED2 /* FavouritesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesDetailView.swift; sourceTree = "<group>"; };
 		5CA8627B29654C1C00344ED2 /* FavouritesDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesDetailView.xib; sourceTree = "<group>"; };
 		5CAEADF72946FEEB003D5BA0 /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -298,6 +300,7 @@
 				5CE75D5C29471E1900F05EE3 /* UIImageView.swift */,
 				5C3C54EE29505F8E000D1B37 /* UIViewConstraintLayout.swift */,
 				5C3735CB296709E70075AA23 /* ImageString.swift */,
+				5CA53C1229681EA800AABD73 /* UILableExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				5CAEADFD2946FEEB003D5BA0 /* SceneDelegate.swift in Sources */,
 				5CA8627A29654BF500344ED2 /* FavouritesDetailView.swift in Sources */,
 				5CE75D5F294727B600F05EE3 /* Food.swift in Sources */,
+				5CA53C1329681EA800AABD73 /* UILableExtension.swift in Sources */,
 				5C5C87382947721B00CB9B64 /* FoodDetailModel.swift in Sources */,
 				5C51729C294B4CD90025DC37 /* DetailViewController.swift in Sources */,
 				5C3735B02966B8C60075AA23 /* NoMealView.swift in Sources */,

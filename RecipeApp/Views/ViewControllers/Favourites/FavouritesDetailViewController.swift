@@ -27,6 +27,7 @@ class FavouritesDetailViewController: UIViewController, NibLoadable, Favouritabl
         view.favouriteDelegate = self as? Favouritable
         view.index = index
         view.setUpView()
+        view.setUpSummary(isHomeView: false)
         return view
     }
 

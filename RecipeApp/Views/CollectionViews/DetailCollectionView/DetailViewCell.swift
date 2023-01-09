@@ -20,7 +20,7 @@ class DetailViewCell: UICollectionViewCell {
     func setUpView(image: String, foodTitle: String, foodSubtitle: Int) {
         imageView.loadImage(fromURL: image)
         title.text = foodTitle
-        subtitle.text = "\(foodSubtitle) mins"
+//        subtitle.text = "\(foodSubtitle) mins"
         ImageString.imageStringConfigurator(with: subtitle, and: String(foodSubtitle))
     }
 
